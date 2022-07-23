@@ -1,0 +1,53 @@
+body{
+    background-image: url("images/img_01.jpg");
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 70vh;
+    width: 95vw;
+    align-items: center;
+    justify-content: center;
+}
+.header1{
+    position: relative;
+    left: 6vw;
+}
+.contents{
+    position: relative;
+    right: 4vh;
+}
+.text_cover{
+    position: relative;
+    bottom: 10vh;
+    width: 50vw;
+}
+.login__cover {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    width: 41%;
+    border: solid darkgrey;
+    background-color: #badce3;
+}
+.button__cover{
+    position: relative;
+    left: 7vw;
+    top: 4vh;
+}
+#login{
+    position: relative;
+    left: 3vw;
+    bottom: 6vh;
+    width: 50%;
+}
+
+#newacc{
+    position: relative;
+    width: 40%;
+}
+#guestUser{
+    position: relative;
+    width: 36%;
+}
