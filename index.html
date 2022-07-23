@@ -20,7 +20,7 @@
                 <form class="button__cover">
                         <div class="text_cover">
                             <label class="form-label" for="txtUserName">User Name</label>
-                            <input class="form-control w-50" id="txtUserName" placeholder="User Name" type="text">
+                            <input class="form-control w-50" id="txtUserid" placeholder="User Name" type="text">
                         </div>
                         <div class="text_cover">
                             <label class="form-label" for="txtPassword">Password</label>
@@ -30,9 +30,11 @@
                             <button id="login" type="button" class="btn btn-info ">Log In</button>
                         </div>
                 </form>
-                <div class="mb-1 button__cover col">
+                <div class="mb-1 bu_cover col">
                     <button type="button" class="btn btn-outline-primary me-sm-1 " data-bs-toggle="modal" data-bs-target="#newUserid">Create New Account</button>
                     <button id="guestUser" type="button" class="btn btn-outline-secondary ">Guest-User LogIn</button>
+                    <button type="button" class="btn btn-outline-primary me-sm-1 " data-bs-toggle="modal" data-bs-target="#administrater">Administrater</button>
+
 
                     <!-- Add New User Acc-->
                     <div class="modal fade" id="newUserid" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -90,6 +92,69 @@
                         </div>
                     </div>
 
+                    <!--ADministrater-->
+                    <div class="modal fade" id="administrater" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                         aria-labelledby="adminl" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-danger" id="adminl">Administrater Log In</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>NIC</h4>
+                                    <form class="d-flex mt-4 mb-4">
+                                        <input class="form-control" type="text">
+                                    </form>
+                                    <h4>Password</h4>
+                                    <form class="d-flex mt-4 mb-4">
+                                        <input class="form-control" type="password">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="ad" type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Admin Log In</button>
+                                    <button type="button" class="btn btn-danger me-sm-1 " data-bs-toggle="modal" data-bs-target="#driver">Driver Log In</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Driver-->
+                    <div class="modal fade" id="driver" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                         aria-labelledby="driverl" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-danger" id="driverl">Driver Log In</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!--Table-->
+                                    <section class="row p-3 mb-5">
+                                        <div class="col">
+                                            <table class="table">
+                                                <thead class="bg-info">
+                                                <tr>
+                                                    <th scope="col">NIC</th>
+                                                    <th scope="col">DURATION</th>
+                                                    <th scope="col">PICK UP DATE </th>
+                                                    <th scope="col">RETURN DATE</th>
+                                                    <th scope="col">RENT TYPE</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="drivertable">
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </section>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -109,7 +174,7 @@
                     <a id="general" class="nav-link" aria-current="page" href="#">General Cars</a>
                 </li>
                 <li class="nav-item">
-                    <a id="premium" class="nav-link" href="#dashboard">Premium Cars</a>
+                    <a id="premium" class="nav-link" href="#">Premium Cars</a>
                 </li>
                 <li class="nav-item">
                     <a id="luxury" class="nav-link" href="#">Luxury Cars</a>
@@ -745,16 +810,110 @@
         </div>
     </section>
 </div>
+<!--Update User-->
+<section id="Update_User" class="container-fluid bg-light ">
+    <header>
+        <h1 class="text-danger">Easy Car Rental</h1>
+        <ul>
+            <li id="UpdateUser">Update User</li>
+            <li id="PlaceOrder">Place Order</li>
+            <li id="lgout">Log Out</li>
+        </ul>
+    </header>
+
+    <div class="row">
+        <div class="col pb-4 pt-5">
+            <section class="container-fluid bg-gradient">
+                <div class="row bg-gradient "><h4>Update User</h4></div>
+                <div class="row bg-gradient">
+                    <form class="mt-4 mb-4 w-100" >
+                        <input id="searchuser" class="form-control w-50 col-sm-5 " type="search" placeholder="Search/Delete" aria-label="Search">
+                    </form>
+                </div>
+                <div class="row bg-gradient">
+                    <div class="col-3 pb-5">
+                        <button id="searchButton" type="button" class="btn bg-success  w-100 m-2">Search</button>
+                    </div>
+                    <div class="mb-1">
+                        <button id="ClearSearch" type="button" class="btn btn-primary ">Clear</button>
+                        <button id="DeleteCustomer" type="button" class="btn btn-danger ">Delete</button>
+                        <button id="UpdateCustomer" type="button" class="btn btn-secondary ">Update</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col pt-5">
+            <div class="mb-3">
+                <label class="form-label" for="txtusername">User Name</label>
+                <input class="form-control w-50" id="txtusername" placeholder="User Name" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtuseraddress">User Address</label>
+                <input class="form-control w-50" id="txtuseraddress" placeholder="User Address" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtusercontact">User Contact</label>
+                <input class="form-control w-50" id="txtusercontact" placeholder="User Contact" type="text">
+            </div>
+        </div>
+        <div class="col-3 pt-5">
+            <div class="mb-3">
+                <label class="form-label" for="txtuserdrivingno">User Driving License No.</label>
+                <input class="form-control w-50" id="txtuserdrivingno" placeholder="User Driving No" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtuseremail">User E-Mail</label>
+                <input class="form-control w-50" id="txtuseremail" placeholder="User E-Mail" type="email">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtusernic">User NIC</label>
+                <input class="form-control w-50" id="txtusernic" placeholder="User NIC" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtuserpassword">User Password</label>
+                <input class="form-control w-50" id="txtuserpassword" placeholder="User Password" type="password">
+            </div>
+            <div class="mb-3">
+                <button id="btnSaveOrUpdate" type="button" class="btn btn-primary" >Save</button>
+                <button id="clearCustomer" type="button" class="btn btn-outline-primary">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row pb-5">
+        <table class="table">
+            <thead class="table-active">
+            <tr>
+                <th scope="col">User Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Driving No</th>
+                <th scope="col">E-Mail</th>
+                <th scope="col">NIC</th>
+
+            </tr>
+            </thead>
+            <tbody id="userTable">
+
+            </tbody>
+        </table>
+    </div>
+</section>
+<!--Place Order-->
+<section id="Place_Order">
+    <header>
+        <h1 class="text-danger">Easy Car Rental</h1>
+        <ul>
+            <li id="UpdateUser1">Update User</li>
+            <li id="PlaceOrder1">Place Order</li>
+            <li id="lgout1">Log Out</li>
+        </ul>
+    </header>
+</section>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script>
-    $("#generalCars").css("display","none");
-    $("#nav").css("display","none");
-    $("#dashboard").css("display","flex");
-    $("#premiumCars").css("display","none");
-    $("#generalCars").css("display","none");
-    $("#luxuryCars").css("display","none");
-
+    logout();
 
     $("#guestUser").click(function (){
         $("#nav").css("display","block");
@@ -778,13 +937,59 @@
         });
     });
     $("#btnlogout").click(function (){
+        logout();
+    });
+    $("#btnlgout").click(function (){
+       logout();
+    });
+    $("#lgout1").click(function (){
+        logout();
+    });
+
+    $("#login").click(function (){
+        login();
+        $("#UpdateUser").click(function (){
+            $("#Update_User").css("display","block");
+            $("#Place_Order").css("display","none");
+        });
+        $("#PlaceOrder").click(function (){
+            $("#Update_User").css("display","none");
+            $("#Place_Order").css("display","block");
+        });
+        $("#PlaceOrder1").click(function (){
+            $("#Update_User").css("display","none");
+            $("#Place_Order").css("display","block");
+        });
+        $("#UpdateUser1").click(function (){
+            $("#Update_User").css("display","block");
+            $("#Place_Order").css("display","none");
+        });
+
+    });
+    $("#lgout").click(function () {
+       logout();
+    });
+
+    function logout() {
+        $("#generalCars").css("display", "none");
+        $("#nav").css("display", "none");
+        $("#dashboard").css("display", "flex");
+        $("#premiumCars").css("display", "none");
+        $("#generalCars").css("display", "none");
+        $("#luxuryCars").css("display", "none");
+        $("#Update_User").css("display", "none");
+        $("#Place_Order").css("display", "none");
+    }
+    function login() {
         $("#generalCars").css("display","none");
-        $("#dashboard").css("display","flex");
+        $("#Update_User").css("display","block");
+        $("#Place_Order").css("display","none");
+        $("#dashboard").css("display","none");
         $("#nav").css("display","none");
         $("#premiumCars").css("display","none");
         $("#generalCars").css("display","none");
         $("#luxuryCars").css("display","none");
-    });
+    }
 
 
 </script>
