@@ -96,8 +96,698 @@
     </div>
 </section>
 <!--Guest User-->
-<section></section>
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand text-info" href="#" style="font-family: Algerian" >Guest User</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a id="general" class="nav-link" aria-current="page" href="#">General Cars</a>
+                </li>
+                <li class="nav-item">
+                    <a id="premium" class="nav-link" href="#dashboard">Premium Cars</a>
+                </li>
+                <li class="nav-item">
+                    <a id="luxury" class="nav-link" href="#">Luxury Cars</a>
+                </li>
+            </ul>
+        </div>
+        <form class="d-flex">
+            <button id="btnlogout" type="button" class="btn btn-outline-light "><i class="fas fa-sign-in-alt"></i> Log Out</button>
+        </form>
+    </div>
+</nav>
+<!--General cars-->
+<div id="generalCars">
+    <section>
+        <div class="general">
+            <div class="gene">
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/Alto_01.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/Alto_02.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/Alto_03.jpg">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h5 class="text-danger lbl">Suzuki Alto Premium-Manual</h5>
+            <table class="table tbl" style="right: 10vh">
+                <thead class="bg-info">
+                <tr>
+                    <th scope="col">No.of Available </th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Free KM for Day</th>
+                    <th scope="col">Monthly Rate</th>
+                    <th scope="col">Free KM for Month</th>
+                    <th scope="col">Price per extra KM</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>2500</td>
+                    <td>100</td>
+                    <td>64,350.00</td>
+                    <td>2400</td>
+                    <td>30.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="general">
+            <div class="gene">
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls2">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/K10_01.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/K10_02.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/k10_03.jpg">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls2"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls2"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h5 class="text-danger lbl">Suzuki Alto K10-Auto</h5>
+            <table class="table tbl">
+                <thead class="bg-info">
+                <tr>
+                    <th scope="col">No.of Available </th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Free KM for Day</th>
+                    <th scope="col">Monthly Rate</th>
+                    <th scope="col">Free KM for Month</th>
+                    <th scope="col">Price per extra KM</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>3000</td>
+                    <td>100</td>
+                    <td>71,390.00</td>
+                    <td>2400</td>
+                    <td>35.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="general">
+            <div class="gene">
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls3">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/celerio_01.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/celerio_02.webp">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/celerio_03.jpg">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls3"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls3"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h5 class="text-danger lbl">Suzuki Celerio-Auto</h5>
+            <table class="table tbl">
+                <thead class="bg-info">
+                <tr>
+                    <th scope="col">No.of Available </th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Free KM for Day</th>
+                    <th scope="col">Monthly Rate</th>
+                    <th scope="col">Free KM for Month</th>
+                    <th scope="col">Price per extra KM</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>3300</td>
+                    <td>100</td>
+                    <td>77,220.00</td>
+                    <td>2400</td>
+                    <td>35.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="general">
+            <div class="gene">
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls4">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/axia_01.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/axia_02.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/axia_03.jpeg">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls4"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls4"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h5 class="text-danger lbl">Perodua Axia-Auto</h5>
+            <table class="table tbl">
+                <thead class="bg-info">
+                <tr>
+                    <th scope="col">No.of Available </th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Free KM for Day</th>
+                    <th scope="col">Monthly Rate</th>
+                    <th scope="col">Free KM for Month</th>
+                    <th scope="col">Price per extra KM</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>3800</td>
+                    <td>100</td>
+                    <td>90,200.00</td>
+                    <td>2400</td>
+                    <td>35.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="general">
+            <div class="gene">
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls5">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/aqua_01.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/aqua_02.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/General/aqua_03.jpeg">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls5"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls5"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h5 class="text-danger lbl">Toyota Prius C/Aqua-Auto</h5>
+            <table class="table tbl" style="right: 10vh">
+                <thead class="bg-info">
+                <tr>
+                    <th scope="col">No.of Available </th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Free KM for Day</th>
+                    <th scope="col">Monthly Rate</th>
+                    <th scope="col">Free KM for Month</th>
+                    <th scope="col">Price per extra KM</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>5000</td>
+                    <td>100</td>
+                    <td>110,330.00</td>
+                    <td>2400</td>
+                    <td>49.50</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+<!--Premium Cars-->
+<div id="premiumCars">
+    <section>
+        <div class="general">
+            <div class="gene">
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls6">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100" src="assets/images/Premium/axio_01.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Premium/axio_02.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Premium/axio_03.jpeg">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls6"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls6"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h5 class="text-danger lbl">Toyota Corolla Axio NZE141</h5>
+            <table class="table tbl">
+                <thead class="bg-info">
+                <tr>
+                    <th scope="col">No.of Available </th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Free KM for Day</th>
+                    <th scope="col">Monthly Rate</th>
+                    <th scope="col">Free KM for Month</th>
+                    <th scope="col">Price per extra KM</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>5500</td>
+                    <td>100</td>
+                    <td>120,330.00</td>
+                    <td>2400</td>
+                    <td>49.50</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="general">
+            <div class="gene">
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls7">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100" src="assets/images/Premium/Bezza_01.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Premium/bezza_02.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Premium/bezza_03.jpeg">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls7"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls7"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h5 class="text-danger lbl">Perodua Bezza Prime Seden(2017)-Auto</h5>
+            <table class="table tbl" style="right: 14vh">
+                <thead class="bg-info">
+                <tr>
+                    <th scope="col">No.of Available </th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Free KM for Day</th>
+                    <th scope="col">Monthly Rate</th>
+                    <th scope="col">Free KM for Month</th>
+                    <th scope="col">Price per extra KM</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>5500</td>
+                    <td>100</td>
+                    <td>120,330.00</td>
+                    <td>2400</td>
+                    <td>49.50</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="general">
+            <div class="gene">
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls8">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100" src="assets/images/Premium/allion_01.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Premium/allion_02.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Premium/allion_03.jpeg">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls8"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls8"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h5 class="text-danger lbl">Toyota Allion NZT 260-Auto</h5>
+            <table class="table tbl">
+                <thead class="bg-info">
+                <tr>
+                    <th scope="col">No.of Available </th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Free KM for Day</th>
+                    <th scope="col">Monthly Rate</th>
+                    <th scope="col">Free KM for Month</th>
+                    <th scope="col">Price per extra KM</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>5800</td>
+                    <td>100</td>
+                    <td>155,760.00</td>
+                    <td>2400</td>
+                    <td>60.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="general">
+            <div class="gene">
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls9">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100" src="assets/images/Premium/nkr_01.webp">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Premium/nkr_02.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Premium/nkr_03.webp">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls9"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls9"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h5 class="text-danger lbl">Toyota Axio NKR 165-Auto</h5>
+            <table class="table tbl">
+                <thead class="bg-info">
+                <tr>
+                    <th scope="col">No.of Available </th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Free KM for Day</th>
+                    <th scope="col">Monthly Rate</th>
+                    <th scope="col">Free KM for Month</th>
+                    <th scope="col">Price per extra KM</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>6000</td>
+                    <td>100</td>
+                    <td>175,230.00</td>
+                    <td>2400</td>
+                    <td>65.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+<!--Luxury Cars-->
+<div id="luxuryCars">
+    <section>
+        <div class="general">
+            <div class="gene">
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls10">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100" src="assets/images/Luxury/premio_01.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Luxury/premio_02.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Luxury/premio_03.jpeg">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls10"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls10"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h5 class="text-danger lbl">Toyota Premio</h5>
+            <table class="table tbl">
+                <thead class="bg-info">
+                <tr>
+                    <th scope="col">No.of Available </th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Free KM for Day</th>
+                    <th scope="col">Monthly Rate</th>
+                    <th scope="col">Free KM for Month</th>
+                    <th scope="col">Price per extra KM</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>10000</td>
+                    <td>100</td>
+                    <td>227,150.00</td>
+                    <td>2400</td>
+                    <td>80.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="general">
+            <div class="gene">
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls11">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100" src="assets/images/Luxury/benz_01.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Luxury/benz_02.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Luxury/benz_03.jpeg">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls11"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls11"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h5 class="text-danger lbl">Mercedes Benz</h5>
+            <table class="table tbl">
+                <thead class="bg-info">
+                <tr>
+                    <th scope="col">No.of Available </th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Free KM for Day</th>
+                    <th scope="col">Monthly Rate</th>
+                    <th scope="col">Free KM for Month</th>
+                    <th scope="col">Price per extra KM</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>18000</td>
+                    <td>100</td>
+                    <td>300,000.00</td>
+                    <td>2400</td>
+                    <td>100.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="general">
+            <div class="gene">
+                <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls12">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." class="d-block w-100" src="assets/images/Luxury/i8_01.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Luxury/i8_02.jpeg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block w-100" src="assets/images/Luxury/i8_03.jpeg">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls12"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls12"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h5 class="text-danger lbl">BMW-i8</h5>
+            <table class="table tbl" style="left: 8vh">
+                <thead class="bg-info">
+                <tr>
+                    <th scope="col">No.of Available </th>
+                    <th scope="col">Daily Rate</th>
+                    <th scope="col">Free KM for Day</th>
+                    <th scope="col">Monthly Rate</th>
+                    <th scope="col">Free KM for Month</th>
+                    <th scope="col">Price per extra KM</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>18000</td>
+                    <td>100</td>
+                    <td>300,000.00</td>
+                    <td>2400</td>
+                    <td>100.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $("#generalCars").css("display","none");
+    $("#nav").css("display","none");
+    $("#dashboard").css("display","flex");
+    $("#premiumCars").css("display","none");
+    $("#generalCars").css("display","none");
+    $("#luxuryCars").css("display","none");
 
+
+    $("#guestUser").click(function (){
+        $("#nav").css("display","block");
+        $("#generalCars").css("display","block");
+        $("#dashboard").css("display","none");
+
+        $("#general").click(function () {
+            $("#premiumCars").css("display","none");
+            $("#generalCars").css("display","block");
+            $("#luxuryCars").css("display","none");
+        });
+        $("#premium").click(function () {
+            $("#premiumCars").css("display","block");
+            $("#generalCars").css("display","none");
+            $("#luxuryCars").css("display","none");
+        });
+        $("#luxury").click(function () {
+            $("#premiumCars").css("display","none");
+            $("#generalCars").css("display","none");
+            $("#luxuryCars").css("display","block");
+        });
+    });
+    $("#btnlogout").click(function (){
+        $("#generalCars").css("display","none");
+        $("#dashboard").css("display","flex");
+        $("#nav").css("display","none");
+        $("#premiumCars").css("display","none");
+        $("#generalCars").css("display","none");
+        $("#luxuryCars").css("display","none");
+    });
+
+
+</script>
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
