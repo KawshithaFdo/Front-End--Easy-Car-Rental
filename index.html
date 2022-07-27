@@ -17,7 +17,7 @@
                 <h1 class="header1">Easy-Car Rental</h1>
             </div>
             <div class="contents container-fluid">
-                <form class="button__cover">
+                <form class="button__cover" id="loginform">
                         <div class="text_cover">
                             <label class="form-label" for="txtUserName">User Name</label>
                             <input class="form-control w-50" id="txtUserid" placeholder="User Name" type="text">
@@ -41,14 +41,16 @@
                          aria-labelledby="userl" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
+
                                 <div class="modal-header">
                                     <h5 class="modal-title text-secondary" id="userl">New User</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
+                                <form id="newuserform">
                                 <div class="modal-body">
                                     <h4>User NIC</h4>
                                     <form class="d-flex mt-4 mb-4">
-                                        <input class="form-control" type="text">
+                                        <input id="nic" class="form-control" type="text">
                                     </form>
                                     <label class="form-label">Input your NIC</label>
                                     <form class="d-flex mt-4 mb-4">
@@ -61,30 +63,35 @@
                                     </form>
                                     <h4>User Name</h4>
                                     <form class="d-flex mt-4 mb-4">
-                                        <input class="form-control" type="text">
+                                        <input id="username" class="form-control" type="text">
                                     </form>
                                     <h4>User Contact</h4>
                                     <form class="d-flex mt-4 mb-4">
-                                        <input class="form-control" type="number">
+                                        <input id="contact" class="form-control" type="number">
+                                    </form>
+                                    <h4>User Address</h4>
+                                    <form class="d-flex mt-4 mb-4">
+                                        <input id="address" class="form-control" type="text">
                                     </form>
                                     <h4>Driving License No</h4>
                                     <form class="d-flex mt-4 mb-4">
-                                        <input class="form-control" type="text">
+                                        <input id="drivingno" class="form-control" type="text">
                                     </form>
                                     <form class="d-flex mt-4 mb-4">
                                         <input type="file" class="form-control" id="licensefile" />
                                     </form>
                                     <h4>E-Mail</h4>
                                     <form class="d-flex mt-4 mb-4">
-                                        <input class="form-control" type="email">
+                                        <input id="email" class="form-control" type="email">
                                     </form>
                                     <h4>Password</h4>
                                     <form class="d-flex mt-4 mb-4">
-                                        <input class="form-control" type="password">
+                                        <input id="password" class="form-control" type="password">
                                     </form>
                                 </div>
+                                </form>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                                    <button id="saveuser" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
                                     <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Clear</button>
                                     <button type="button" class="btn btn-danger" >Close</button>
                                 </div>
@@ -836,8 +843,8 @@
                     </div>
                     <div class="mb-1">
                         <button id="ClearSearch" type="button" class="btn btn-primary ">Clear</button>
-                        <button id="DeleteCustomer" type="button" class="btn btn-danger ">Delete</button>
-                        <button id="UpdateCustomer" type="button" class="btn btn-secondary ">Update</button>
+                        <button id="Delete" type="button" class="btn btn-danger ">Delete</button>
+                        <button id="Update" type="button" class="btn btn-secondary ">Update</button>
                     </div>
                 </div>
             </section>
@@ -875,7 +882,7 @@
             </div>
             <div class="mb-3">
                 <button id="btnSaveOrUpdate" type="button" class="btn btn-primary" >Save</button>
-                <button id="clearCustomer" type="button" class="btn btn-outline-primary">Clear</button>
+                <button id="clearUser" type="button" class="btn btn-outline-primary">Clear</button>
             </div>
         </div>
     </div>
@@ -909,11 +916,437 @@
             <li id="lgout1">Log Out</li>
         </ul>
     </header>
+    <div class="d-flex">
+        <div class="row bg-gradient "><h4>Place Booking</h4></div>
+        <div class="col pt-5">
+            <div class="mb-3">
+                <label class="form-label" for="txtu_NIC">User NIC</label>
+                <input class="form-control w-50" id="txtu_NIC" placeholder="User Name" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtcarregno">Car Reg_No</label>
+                <input class="form-control w-50" id="txtcarregno" placeholder="User Address" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtdriverStatus">Driver Status</label>
+                <input class="form-control w-50" id="txtdriverStatus" placeholder="User Contact" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtdrivernic">Driver NIC</label>
+                <input class="form-control w-50" id="txtdrivernic" placeholder="User Password" type="password">
+            </div>
+        </div>
+        <div class="col pt-5 div_cover">
+            <div class="mb-3">
+                <label class="form-label" for="txtrenttype">Rent Type</label>
+                <input class="form-control w-50" id="txtrenttype" placeholder="User E-Mail" type="email">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtpickupdate">PickUp-Date</label>
+                <input class="form-control w-50" id="txtpickupdate" placeholder="User NIC" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtreturndate">Return Date</label>
+                <input class="form-control w-50" id="txtreturndate" placeholder="User Password" type="password">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtduration">Duration</label>
+                <input class="form-control w-50" id="txtduration" placeholder="User Driving No" type="text">
+            </div>
+            <div class="mb-3">
+                <button id="btnplacebooking" type="button" class="btn btn-primary" >Place Booking</button>
+                <button id="clear" type="button" class="btn btn-outline-primary">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</section>
+<!--Admin-->
+<section id="admin" class="container-fluid">
+    <header>
+        <h1 class="text-danger">Easy Car Rental</h1>
+        <ul>
+            <li id="managecars">Manage Car</li>
+            <li id="viewvehicleschedule">View</li>
+            <li id="calculatepayments">Payments</li>
+            <li id="reports">Reports</li>
+            <li id="lg_out">Log Out</li>
+        </ul>
+    </header>
+    <div class="row">
+        <div class="col pb-4 pt-5">
+            <section class="container-fluid bg-gradient">
+                <div class="row bg-gradient "><h4>Update Car</h4></div>
+                <div class="row bg-gradient">
+                    <form class="mt-4 mb-4 w-100" >
+                        <input id="searchcar" class="form-control w-50 col-sm-5 " type="search" placeholder="Search/Delete" aria-label="Search">
+                    </form>
+                </div>
+                <div class="row bg-gradient">
+                    <div class="col-3 pb-5">
+                        <button id="search" type="button" class="btn bg-success  w-100 m-2">Search</button>
+                    </div>
+                    <div class="mb-1">
+                        <button id="clr" type="button" class="btn btn-primary ">Clear</button>
+                        <button id="Deletecar" type="button" class="btn btn-danger ">Delete</button>
+                        <button id="Updatecar" type="button" class="btn btn-secondary ">Update</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col">
+            <div class="mb-3">
+                <label class="form-label" for="txtregno">Car Reg_No</label>
+                <input class="form-control w-50" id="txtregno" placeholder="Car Reg_No" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtcolor">Car Color</label>
+                <input class="form-control w-50" id="txtcolor" placeholder="Car Color" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtbrand">Car Brand</label>
+                <input class="form-control w-50" id="txtbrand" placeholder="Car Brand" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txttype">Car Type</label>
+                <input class="form-control w-50" id="txttype" placeholder="Car Type" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="frontimg">Front Image</label>
+                <input class="form-control w-50" id="frontimg" type="file">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="rearimg">Rear Image</label>
+                <input class="form-control w-50" id="rearimg" type="file">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="sideimg">Side Image</label>
+                <input class="form-control w-50" id="sideimg" type="file">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="interiorimg">interior Image</label>
+                <input class="form-control w-50" id="interiorimg" type="file">
+            </div>
+        </div>
+        <div class="col-3 ">
+            <div class="mb-3">
+                <label class="form-label" for="txtnoofpassengers">No. Of Passengers</label>
+                <input class="form-control w-50" id="txtnoofpassengers" placeholder="No. Of Passengers" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txttransmission">Car Transmission</label>
+                <input class="form-control w-50" id="txttransmission" placeholder="Car Transmission" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtfuel">Car Fuel</label>
+                <input class="form-control w-50" id="txtfuel" placeholder="Car Fuel" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtdailyrate">Daily Rate</label>
+                <input class="form-control w-50" id="txtdailyrate" placeholder="Daily Rate" type="password">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtMonthlyrate">Monthly Rate</label>
+                <input class="form-control w-50" id="txtMonthlyrate" placeholder="Monthly Rate" type="password">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtfreemilage">Free Milage</label>
+                <input class="form-control w-50" id="txtfreemilage" placeholder="Free Milage" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtextraprice">Extra Price</label>
+                <input class="form-control w-50" id="txtextraprice" placeholder="Extra Price" type="password">
+            </div>
+            <div class="mb-3">
+                <button id="btnSaveCar" type="button" class="btn btn-primary" >Save</button>
+                <button id="clearcar" type="button" class="btn btn-outline-primary">Clear</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!--View-->
+<section id="view" class="container-fluid">
+    <header>
+        <h1 class="text-danger">Easy Car Rental</h1>
+        <ul>
+            <li id="vmanagecars">Manage Car</li>
+            <li id="vviewvehicleschedule">View</li>
+            <li id="vcalculatepayments">Payments</li>
+            <li id="vreports">Reports</li>
+            <li id="vlg_out">Log Out</li>
+        </ul>
+    </header>
+    <div class="row">
+        <div class="col pb-4 pt-5 d-flex">
+            <section class="container-fluid bg-gradient">
+                <div class="row bg-gradient "><h4>View</h4></div>
+                <!--Verify Customer-->
+                <div class="row bg-gradient">
+                    <form class="mt-4 mb-4 w-60" >
+                        <label class="form-label" for="txtverifyCustomer">Verify Customer</label>
+                        <input id="txtverifyCustomer" class="form-control w-25 col-sm-5 " type="search" placeholder="Verify Customer" aria-label="Search">
+                    </form>
+                </div>
+                <div class="row bg-gradient">
+                    <div class="col-3 pb-5">
+                        <button id="btnverifyCustomer" type="button" class="btn bg-success  w-100 m-2">Verify Customer</button>
+                    </div>
+                </div>
+                <!--Accept Rent Request-->
+                <div class="row bg-gradient">
+                    <form class="mt-4 mb-4 w-60" >
+                        <label class="form-label" for="txtverifyCustomer">Verify Rent</label>
+                        <input id="txtVerifyrent" class="form-control w-25 col-sm-5 " type="search" placeholder="Verify Rent" aria-label="Search">
+                    </form>
+                </div>
+                <div class="row bg-gradient">
+                    <div class="col-3 pb-5">
+                        <button id="btnverifyrent" type="button" class="btn bg-success  w-100 m-2">Verify Rent</button>
+                    </div>
+                </div>
+            </section>
+            <section class="container-fluid ">
+                <!--Change Driver-->
+                <div class="row bg-gradient">
+                    <form class="mt-4 mb-4 w-60" >
+                        <label class="form-label" for="txtbookingid">Booking ID</label>
+                        <input id="txtbookingid" class="form-control w-25 col-sm-5 " type="search" placeholder="Booking Id" aria-label="Search">
+                    </form>
+                    <form class="mt-4 mb-4 w-60" >
+                        <label class="form-label" for="txtD_Nic">Driver Nic</label>
+                        <input id="txtD_Nic" class="form-control w-25 col-sm-5 " type="search" placeholder="Driver NIC" aria-label="Search">
+                    </form>
+                </div>
+                <div class="row bg-gradient">
+                    <div class="col-3 pb-5">
+                        <button id="btnChangeDriver" type="button" class="btn bg-success  w-100 m-2">Change Driver</button>
+                    </div>
+                </div>
+                <!--Mark Vehicles-->
+                <div class="row bg-gradient">
+                    <form class="mt-4 mb-4 w-60" >
+                        <label class="form-label" for="txtverifyCustomer">Mark Vehicle</label>
+                        <input id="txtmarkVehicle" class="form-control w-25 col-sm-5 " type="search" placeholder="Mark Vehicle" aria-label="Search">
+                    </form>
+                </div>
+                <div class="row bg-gradient">
+                    <div class="col-3 pb-5">
+                        <button id="btnMarkVehicle" type="button" class="btn bg-success  w-100 m-2">Mark Vehicle</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+       <!-- <div class="col">
+            <div class="mb-3">
+                <label class="form-label" for="txtregno">Car Reg_No</label>
+                <input class="form-control w-50" id="txtregno" placeholder="Car Reg_No" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtcolor">Car Color</label>
+                <input class="form-control w-50" id="txtcolor" placeholder="Car Color" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtbrand">Car Brand</label>
+                <input class="form-control w-50" id="txtbrand" placeholder="Car Brand" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txttype">Car Type</label>
+                <input class="form-control w-50" id="txttype" placeholder="Car Type" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="frontimg">Front Image</label>
+                <input class="form-control w-50" id="frontimg" type="file">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="rearimg">Rear Image</label>
+                <input class="form-control w-50" id="rearimg" type="file">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="sideimg">Side Image</label>
+                <input class="form-control w-50" id="sideimg" type="file">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="interiorimg">interior Image</label>
+                <input class="form-control w-50" id="interiorimg" type="file">
+            </div>
+        </div>
+        <div class="col-3 ">
+            <div class="mb-3">
+                <label class="form-label" for="txtnoofpassengers">No. Of Passengers</label>
+                <input class="form-control w-50" id="txtnoofpassengers" placeholder="No. Of Passengers" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txttransmission">Car Transmission</label>
+                <input class="form-control w-50" id="txttransmission" placeholder="Car Transmission" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtfuel">Car Fuel</label>
+                <input class="form-control w-50" id="txtfuel" placeholder="Car Fuel" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtdailyrate">Daily Rate</label>
+                <input class="form-control w-50" id="txtdailyrate" placeholder="Daily Rate" type="password">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtMonthlyrate">Monthly Rate</label>
+                <input class="form-control w-50" id="txtMonthlyrate" placeholder="Monthly Rate" type="password">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtfreemilage">Free Milage</label>
+                <input class="form-control w-50" id="txtfreemilage" placeholder="Free Milage" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtextraprice">Extra Price</label>
+                <input class="form-control w-50" id="txtextraprice" placeholder="Extra Price" type="password">
+            </div>
+            <div class="mb-3">
+                <button id="btnSaveCar" type="button" class="btn btn-primary" >Save</button>
+                <button id="clearcar" type="button" class="btn btn-outline-primary">Clear</button>
+            </div>
+        </div>-->
+    </div>
+</section>
+<!--Reports-->
+<section id="report" class="container-fluid">
+    <header>
+        <h1 class="text-danger">Easy Car Rental</h1>
+        <ul>
+            <li id="rmanagecars">Manage Car</li>
+            <li id="rviewvehicleschedule">View</li>
+            <li id="rcalculatepayments">Payments</li>
+            <li id="rreports">Reports</li>
+            <li id="rlg_out">Log Out</li>
+        </ul>
+    </header>
+    <div class="row">
+        <div class="col pb-4 pt-5 d-flex justify-content-center">
+            <section class="container-fluid bg-gradient">
+                <div class="row bg-gradient "><h4>Income Reports</h4></div>
+                <div class="row bg-gradient">
+                    <div class="col-3 pb-5">
+                        <button id="btnDailyIncome" type="button" class="btn bg-success  w-100 m-2">Daily Income</button>
+                    </div>
+                </div>
+                <div class="row bg-gradient">
+                    <div class="col-3 pb-5">
+                        <button id="btnweeklyincome" type="button" class="btn bg-success  w-100 m-2">Weekly Income</button>
+                    </div>
+                </div>
+            </section>
+            <section class="container-fluid">
+                <div class="row bg-gradient">
+                    <div class="col-3 pb-5">
+                        <button id="btnmonthlyincome" type="button" class="btn bg-success  w-100 m-2">Monthly Income</button>
+                    </div>
+                </div>
+                <div class="row bg-gradient">
+                    <div class="col-3 pb-5">
+                        <button id="btnyearlyincome" type="button" class="btn bg-success  w-100 m-2">Yearly Income</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+<!--Calculate Bill-->
+<section id="bill" class="container-fluid">
+    <header>
+        <h1 class="text-danger">Easy Car Rental</h1>
+        <ul>
+            <li id="bmanagecars">Manage Car</li>
+            <li id="bviewvehicleschedule">View</li>
+            <li id="bcalculatepayments">Payments</li>
+            <li id="breports">Reports</li>
+            <li id="blg_out">Log Out</li>
+        </ul>
+    </header>
+    <div>
+        <div class="row">
+            <div class="col pb-4 pt-5 d-flex">
+                <section class="container-fluid bg-gradient">
+                    <div class="row bg-gradient "><h4>Payments</h4></div>
+                    <div class="row bg-gradient">
+                        <form class="mt-4 mb-4 w-60" >
+                            <label class="form-label" for="txtcarregno">Car Reg_No</label>
+                            <input id="carregno" class="form-control w-25 col-sm-5 " type="search" placeholder="Car Reg_No" aria-label="Search">
+                        </form>
+                        <form class="mt-4 mb-4 w-60" >
+                            <label class="form-label" for="damagecost">Damage Cost</label>
+                            <input id="damagecost" class="form-control w-25 col-sm-5 " type="search" placeholder="Damage Cost" aria-label="Search">
+                        </form>
+                    </div>
+                    <div class="row bg-gradient">
+                        <div class="col-3 pb-5">
+                            <button id="btnbill" type="button" class="btn bg-success  w-100 m-2">Place Bill</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
 </section>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script>
     logout();
+
+    $("#login").click(function () {
+        let userName = $("#txtUserid").val();
+        let password=$("#txtPassword").val();
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/booking?user_Name="+userName+"&password="+password,
+            method: "GET",
+            contentType: "application/json",
+            //data:null,
+            success: function (res) {
+                if (res.code == 200) {
+                    alert(res.message);
+                    loginuser();
+                } else if (res.code == 400) {
+                    alert(res.message);
+                    } else {
+                        alert(res.message);
+                }
+            },
+            error: function (ob, errorStus) {
+                console.log(ob);
+            }
+        });
+    });
+
+    $("#saveuser").click(function () {
+       var userOb={
+           nic: $("#nic").val(),
+           email: $("#email").val(),
+           user_Name: $("#username").val(),
+           password: $("#password").val(),
+           drivingNo:$("#drivingno").val(),
+           address: $("#address").val(),
+           contact: $("#contact").val()
+
+       }
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/guest",
+            method: "POST",
+            contentType: "application/json",
+             data: JSON.stringify(userOb),
+            success: function (res) {
+                if (res.code == 200) {
+                    alert(res.message);
+                } else if (res.code == 400) {
+                    alert(res.message);
+                } else {
+                    alert(res.message);
+                    console.log(res.code);
+                }
+            },
+            error: function (ob, errorStus) {
+                console.log(ob);
+            }
+        });
+    });
+
 
     $("#guestUser").click(function (){
         $("#nav").css("display","block");
@@ -945,9 +1378,150 @@
     $("#lgout1").click(function (){
         logout();
     });
+    $("#lg_out").click(function (){
+        logout();
+    });
+    $("#lgout").click(function () {
+       logout();
+    });
+    $("#ad").click(function () {
+       admin();
+        $("#managecars").click(function () {
+           admin();
 
-    $("#login").click(function (){
+        });
+        $("#viewvehicleschedule").click(function () {
+            view();
+            $("#vmanagecars").click(function () {
+                admin();
+            });
+            $("#vcalculatepayments").click(function () {
+                calculate();
+            });
+            $("#vlg_out").click(function () {
+                logout();
+            });
+            $("#vreports").click(function () {
+               report();
+            });
+
+        });
+        $("#calculatepayments").click(function () {
+            calculate();
+            $("#bmanagecars").click(function () {
+                admin();
+            });
+            $("#breports").click(function () {
+                report();
+            });
+            $("#blg_out").click(function () {
+                logout();
+            });
+            $("#bviewvehicleschedule").click(function () {
+                view();
+            });
+        });
+        $("#reports").click(function () {
+            report();
+            $("#rmanagecars").click(function () {
+                admin();
+            });
+            $("#rcalculatepayments").click(function () {
+                calculate();
+            });
+            $("#rlg_out").click(function () {
+                logout();
+            });
+            $("#rviewvehicleschedule").click(function () {
+                view();
+            });
+        });
+
+    });
+
+    function calculate() {
+        $("#generalCars").css("display", "none");
+        $("#nav").css("display", "none");
+        $("#dashboard").css("display", "none");
+        $("#premiumCars").css("display", "none");
+        $("#generalCars").css("display", "none");
+        $("#luxuryCars").css("display", "none");
+        $("#Update_User").css("display", "none");
+        $("#Place_Order").css("display", "none");
+        $("#view").css("display", "none");
+        $("#report").css("display", "none");
+        $("#admin").css("display", "none");
+        $("#bill").css("display", "block");
+    }
+    function admin() {
+        $("#generalCars").css("display", "none");
+        $("#nav").css("display", "none");
+        $("#dashboard").css("display", "none");
+        $("#premiumCars").css("display", "none");
+        $("#generalCars").css("display", "none");
+        $("#luxuryCars").css("display", "none");
+        $("#Update_User").css("display", "none");
+        $("#Place_Order").css("display", "none");
+        $("#view").css("display", "none");
+        $("#report").css("display", "none");
+        $("#bill").css("display", "none");
+        $("#admin").css("display", "block");
+    }
+    function logout() {
+        $("#generalCars").css("display", "none");
+        $("#nav").css("display", "none");
+        $("#dashboard").css("display", "flex");
+        $("#premiumCars").css("display", "none");
+        $("#generalCars").css("display", "none");
+        $("#luxuryCars").css("display", "none");
+        $("#Update_User").css("display", "none");
+        $("#Place_Order").css("display", "none");
+        $("#admin").css("display", "none");
+        $("#view").css("display", "none");
+        $("#report").css("display", "none");
+        $("#bill").css("display", "none");
+    }
+    function login() {
+        $("#generalCars").css("display","none");
+        $("#Update_User").css("display","block");
+        $("#Place_Order").css("display","none");
+        $("#dashboard").css("display","none");
+        $("#nav").css("display","none");
+        $("#premiumCars").css("display","none");
+        $("#generalCars").css("display","none");
+        $("#luxuryCars").css("display","none");
+    }
+    function view() {
+        $("#generalCars").css("display", "none");
+        $("#nav").css("display", "none");
+        $("#dashboard").css("display", "none");
+        $("#premiumCars").css("display", "none");
+        $("#generalCars").css("display", "none");
+        $("#luxuryCars").css("display", "none");
+        $("#Update_User").css("display", "none");
+        $("#Place_Order").css("display", "none");
+        $("#admin").css("display", "none");
+        $("#report").css("display", "none");
+        $("#bill").css("display", "none");
+        $("#view").css("display", "block");
+    }
+    function report() {
+        $("#generalCars").css("display", "none");
+        $("#nav").css("display", "none");
+        $("#dashboard").css("display", "none");
+        $("#premiumCars").css("display", "none");
+        $("#generalCars").css("display", "none");
+        $("#luxuryCars").css("display", "none");
+        $("#Update_User").css("display", "none");
+        $("#Place_Order").css("display", "none");
+        $("#admin").css("display", "none");
+        $("#view").css("display", "none");
+        $("#bill").css("display", "none");
+        $("#report").css("display", "block");
+    }
+    function loginuser() {
         login();
+
         $("#UpdateUser").click(function (){
             $("#Update_User").css("display","block");
             $("#Place_Order").css("display","none");
@@ -965,30 +1539,6 @@
             $("#Place_Order").css("display","none");
         });
 
-    });
-    $("#lgout").click(function () {
-       logout();
-    });
-
-    function logout() {
-        $("#generalCars").css("display", "none");
-        $("#nav").css("display", "none");
-        $("#dashboard").css("display", "flex");
-        $("#premiumCars").css("display", "none");
-        $("#generalCars").css("display", "none");
-        $("#luxuryCars").css("display", "none");
-        $("#Update_User").css("display", "none");
-        $("#Place_Order").css("display", "none");
-    }
-    function login() {
-        $("#generalCars").css("display","none");
-        $("#Update_User").css("display","block");
-        $("#Place_Order").css("display","none");
-        $("#dashboard").css("display","none");
-        $("#nav").css("display","none");
-        $("#premiumCars").css("display","none");
-        $("#generalCars").css("display","none");
-        $("#luxuryCars").css("display","none");
     }
 
 
