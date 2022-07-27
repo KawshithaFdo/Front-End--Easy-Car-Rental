@@ -109,13 +109,13 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <h4>NIC</h4>
+                                    <h4>Admin_Name</h4>
                                     <form class="d-flex mt-4 mb-4">
-                                        <input class="form-control" type="text">
+                                        <input id="adminname" class="form-control" type="text">
                                     </form>
                                     <h4>Password</h4>
                                     <form class="d-flex mt-4 mb-4">
-                                        <input class="form-control" type="password">
+                                        <input id="adminpassword" class="form-control" type="password">
                                     </form>
                                 </div>
                                 <div class="modal-footer">
@@ -834,17 +834,12 @@
                 <div class="row bg-gradient "><h4>Update User</h4></div>
                 <div class="row bg-gradient">
                     <form class="mt-4 mb-4 w-100" >
-                        <input id="searchuser" class="form-control w-50 col-sm-5 " type="search" placeholder="Search/Delete" aria-label="Search">
+                        <input id="searchuser" class="form-control w-50 col-sm-5 " type="search" placeholder="Enter User NIC" aria-label="Search">
                     </form>
                 </div>
                 <div class="row bg-gradient">
                     <div class="col-3 pb-5">
                         <button id="searchButton" type="button" class="btn bg-success  w-100 m-2">Search</button>
-                    </div>
-                    <div class="mb-1">
-                        <button id="ClearSearch" type="button" class="btn btn-primary ">Clear</button>
-                        <button id="Delete" type="button" class="btn btn-danger ">Delete</button>
-                        <button id="Update" type="button" class="btn btn-secondary ">Update</button>
                     </div>
                 </div>
             </section>
@@ -881,7 +876,7 @@
                 <input class="form-control w-50" id="txtuserpassword" placeholder="User Password" type="password">
             </div>
             <div class="mb-3">
-                <button id="btnSaveOrUpdate" type="button" class="btn btn-primary" >Save</button>
+                <button id="btnUpdate" type="button" class="btn btn-primary" >Update</button>
                 <button id="clearUser" type="button" class="btn btn-outline-primary">Clear</button>
             </div>
         </div>
@@ -901,7 +896,14 @@
             </tr>
             </thead>
             <tbody id="userTable">
-
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -953,6 +955,10 @@
                 <label class="form-label" for="txtduration">Duration</label>
                 <input class="form-control w-50" id="txtduration" placeholder="User Driving No" type="text">
             </div>
+            <div class="mb-3" >
+                <label class="form-label" for="damagecost">Damage Cost</label>
+                <input id="damagecost" class="form-control w-25 col-sm-5 " type="search" placeholder="Damage Cost" aria-label="Search">
+            </div>
             <div class="mb-3">
                 <button id="btnplacebooking" type="button" class="btn btn-primary" >Place Booking</button>
                 <button id="clear" type="button" class="btn btn-outline-primary">Clear</button>
@@ -969,7 +975,6 @@
         <ul>
             <li id="managecars">Manage Car</li>
             <li id="viewvehicleschedule">View</li>
-            <li id="calculatepayments">Payments</li>
             <li id="reports">Reports</li>
             <li id="lg_out">Log Out</li>
         </ul>
@@ -1009,8 +1014,8 @@
                 <input class="form-control w-50" id="txtbrand" placeholder="Car Brand" type="text">
             </div>
             <div class="mb-3">
-                <label class="form-label" for="txttype">Car Type</label>
-                <input class="form-control w-50" id="txttype" placeholder="Car Type" type="text">
+                <label class="form-label" for="txttype">Rent Type</label>
+                <input class="form-control w-50" id="txttype" placeholder="Daily/Monthly" type="text">
             </div>
             <div class="mb-3">
                 <label class="form-label" for="frontimg">Front Image</label>
@@ -1044,19 +1049,23 @@
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtdailyrate">Daily Rate</label>
-                <input class="form-control w-50" id="txtdailyrate" placeholder="Daily Rate" type="password">
+                <input class="form-control w-50" id="txtdailyrate" placeholder="Daily Rate" type="text">
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtMonthlyrate">Monthly Rate</label>
-                <input class="form-control w-50" id="txtMonthlyrate" placeholder="Monthly Rate" type="password">
+                <input class="form-control w-50" id="txtMonthlyrate" placeholder="Monthly Rate" type="text">
             </div>
             <div class="mb-3">
-                <label class="form-label" for="txtfreemilage">Free Milage</label>
-                <input class="form-control w-50" id="txtfreemilage" placeholder="Free Milage" type="text">
+                <label class="form-label" for="txtfreemilageday">Free Milage-Day</label>
+                <input class="form-control w-50" id="txtfreemilageday" placeholder="Free Milage-Day" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtfreemilagemonth">Free Milage-Month</label>
+                <input class="form-control w-50" id="txtfreemilagemonth" placeholder="Free Milage-Month" type="text">
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtextraprice">Extra Price</label>
-                <input class="form-control w-50" id="txtextraprice" placeholder="Extra Price" type="password">
+                <input class="form-control w-50" id="txtextraprice" placeholder="Extra Price" type="text">
             </div>
             <div class="mb-3">
                 <button id="btnSaveCar" type="button" class="btn btn-primary" >Save</button>
@@ -1072,7 +1081,6 @@
         <ul>
             <li id="vmanagecars">Manage Car</li>
             <li id="vviewvehicleschedule">View</li>
-            <li id="vcalculatepayments">Payments</li>
             <li id="vreports">Reports</li>
             <li id="vlg_out">Log Out</li>
         </ul>
@@ -1214,7 +1222,7 @@
         <ul>
             <li id="rmanagecars">Manage Car</li>
             <li id="rviewvehicleschedule">View</li>
-            <li id="rcalculatepayments">Payments</li>
+<!--            <li id="rcalculatepayments">Payments</li>-->
             <li id="rreports">Reports</li>
             <li id="rlg_out">Log Out</li>
         </ul>
@@ -1249,43 +1257,6 @@
         </div>
     </div>
 </section>
-<!--Calculate Bill-->
-<section id="bill" class="container-fluid">
-    <header>
-        <h1 class="text-danger">Easy Car Rental</h1>
-        <ul>
-            <li id="bmanagecars">Manage Car</li>
-            <li id="bviewvehicleschedule">View</li>
-            <li id="bcalculatepayments">Payments</li>
-            <li id="breports">Reports</li>
-            <li id="blg_out">Log Out</li>
-        </ul>
-    </header>
-    <div>
-        <div class="row">
-            <div class="col pb-4 pt-5 d-flex">
-                <section class="container-fluid bg-gradient">
-                    <div class="row bg-gradient "><h4>Payments</h4></div>
-                    <div class="row bg-gradient">
-                        <form class="mt-4 mb-4 w-60" >
-                            <label class="form-label" for="txtcarregno">Car Reg_No</label>
-                            <input id="carregno" class="form-control w-25 col-sm-5 " type="search" placeholder="Car Reg_No" aria-label="Search">
-                        </form>
-                        <form class="mt-4 mb-4 w-60" >
-                            <label class="form-label" for="damagecost">Damage Cost</label>
-                            <input id="damagecost" class="form-control w-25 col-sm-5 " type="search" placeholder="Damage Cost" aria-label="Search">
-                        </form>
-                    </div>
-                    <div class="row bg-gradient">
-                        <div class="col-3 pb-5">
-                            <button id="btnbill" type="button" class="btn bg-success  w-100 m-2">Place Bill</button>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-</section>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script>
@@ -1301,8 +1272,9 @@
             //data:null,
             success: function (res) {
                 if (res.code == 200) {
-                    alert(res.message);
+                   //alert(res.message);
                     loginuser();
+                    loadtable();
                 } else if (res.code == 400) {
                     alert(res.message);
                     } else {
@@ -1333,6 +1305,7 @@
              data: JSON.stringify(userOb),
             success: function (res) {
                 if (res.code == 200) {
+                    clearuser();
                     alert(res.message);
                 } else if (res.code == 400) {
                     alert(res.message);
@@ -1345,6 +1318,244 @@
                 console.log(ob);
             }
         });
+    });
+
+    $("#ad").click(function () {
+        let userName = $("#adminname").val();
+        let password=$("#adminpassword").val();
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/admin?user_Name="+userName+"&password="+password,
+            method: "GET",
+            contentType: "application/json",
+            success: function (res) {
+                if (res.code == 200) {
+                   // alert(res.message);
+                    adminlogin();
+                } else if (res.code == 400) {
+                    alert(res.message);
+                } else {
+                    alert(res.message);
+                }
+            },
+            error: function (ob, errorStus) {
+                alert(res.message);
+                console.log(ob);
+            }
+        });
+
+    });
+
+    $("#searchButton").click(function () {
+        let usernic = $("#searchuser").val();
+        $("#searchuser").val("");
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/booking?nic="+usernic,
+            method: "GET",
+            contentType: "application/json",
+            success: function (res) {
+                if (res.code == 200) {
+                    var user=res.data;
+
+                    $("#txtusername").val(user.user_Name);
+                    $("#txtuseraddress").val(user.address);
+                    $("#txtusercontact").val(user.contact);
+                    $("#txtuserdrivingno").val(user.drivingNo);
+                    $("#txtuseremail").val(user.email);
+                    $("#txtuserpassword").val(user.password);
+                    $("#txtusernic").val(user.nic);
+
+                } else if (res.code == 400) {
+                    alert(res.message);
+                } else {
+                    alert(res.message);
+                }
+            },
+            error: function (ob, errorStus) {
+                alert(res.message);
+                console.log(ob);
+            }
+        });
+
+    });
+
+    $("#btnUpdate").click(function () {
+
+        var userOb={
+            nic: $("#txtusernic").val(),
+            email: $("#txtuseremail").val(),
+            user_Name: $("#txtusername").val(),
+            password: $("#txtuserpassword").val(),
+            drivingNo:$("#txtuserdrivingno").val(),
+            address: $("#txtuseraddress").val(),
+            contact: $("#txtusercontact").val()
+
+        }
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/booking",
+            method: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify(userOb),
+            success: function (res) {
+                if (res.code == 200) {
+                    $("#txtusername").val("");
+                    $("#txtuseraddress").val("");
+                    $("#txtusercontact").val("");
+                    $("#txtuserdrivingno").val("");
+                    $("#txtuseremail").val("");
+                    $("#txtuserpassword").val("");
+                    $("#txtusernic").val("");
+
+                    loadtable();
+                    alert(res.message);
+                } else if (res.code == 400) {
+                    alert(res.message);
+                } else {
+                    alert(res.message);
+                    console.log(res.code);
+                }
+            },
+            error: function (ob, errorStus) {
+                console.log(ob);
+            }
+        });
+
+    });
+
+    $("#btnSaveCar").click(function () {
+        var carOb={
+            reg_No: $("#txtregno").val(),
+            color: $("#txtcolor").val(),
+            brand: $("#txtbrand").val(),
+            type: $("#txttype").val(),
+            no_ofPassengers:$("#txtnoofpassengers").val(),
+            transmission: $("#txttransmission").val(),
+            fuel: $("#txtfuel").val(),
+            dailyrate:$("#txtdailyrate").val(),
+            monthlyrate:$("#txtMonthlyrate").val(),
+            free_Milage_forDay: $("#txtfreemilageday").val(),
+            free_Milage_forMonth:$("#txtfreemilagemonth").val(),
+            extra_Price:$("#txtextraprice").val()
+
+        }
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/admin",
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(carOb),
+            success: function (res) {
+                if (res.code == 200) {
+                    clearcar();
+                    alert(res.message);
+                } else if (res.code == 400) {
+                    alert(res.message);
+                } else {
+                    alert(res.message);
+                    console.log(res.code);
+                }
+            },
+            error: function (ob, errorStus) {
+                console.log(ob);
+            }
+        });
+    });
+
+    $("#search").click(function () {
+        let carid = $("#searchcar").val();
+        $("#searchcar").val("");
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/car?nic="+carid,
+            method: "GET",
+            contentType: "application/json",
+            success: function (res) {
+                if (res.code == 200) {
+                    var car=res.data;
+                    $("#txtregno").val(car.reg_No);
+                    $("#txtcolor").val(car.color);
+                    $("#txtbrand").val(car.brand);
+                    $("#txttype").val(car.type);
+                    $("#txtnoofpassengers").val(car.no_ofPassengers);
+                    $("#txttransmission").val(car.transmission);
+                    $("#txtfuel").val(car.fuel);
+                    $("#txtdailyrate").val(car.dailyrate);
+                    $("#txtMonthlyrate").val(car.monthlyrate);
+                    $("#txtfreemilagemonth").val(car.free_Milage_forMonth);
+                    $("#txtfreemilageday").val(car.free_Milage_forDay);
+                    $("#txtextraprice").val(car.extra_Price);
+
+                } else if (res.code == 400) {
+                    alert(res.message);
+                } else {
+                    alert(res.message);
+                }
+            },
+            error: function (ob, errorStus) {
+                alert(res.message);
+                console.log(ob);
+            }
+        });
+
+    });
+
+    $("#Updatecar").click(function () {
+        var carOb={
+            reg_No: $("#txtregno").val(),
+            color: $("#txtcolor").val(),
+            brand: $("#txtbrand").val(),
+            type: $("#txttype").val(),
+            no_ofPassengers:$("#txtnoofpassengers").val(),
+            transmission: $("#txttransmission").val(),
+            fuel: $("#txtfuel").val(),
+            dailyrate:$("#txtdailyrate").val(),
+            monthlyrate:$("#txtMonthlyrate").val(),
+            free_Milage_forDay: $("#txtfreemilageday").val(),
+            free_Milage_forMonth:$("#txtfreemilagemonth").val(),
+            extra_Price:$("#txtextraprice").val()
+
+        }
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/admin",
+            method: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify(carOb),
+            success: function (res) {
+                if (res.code == 200) {
+                    clearcar();
+                    alert(res.message);
+                } else if (res.code == 400) {
+                    alert(res.message);
+                } else {
+                    alert(res.message);
+                    console.log(res.code);
+                }
+            },
+            error: function (ob, errorStus) {
+                console.log(ob);
+            }
+        });
+    });
+
+    $("#Deletecar").click(function () {
+        let carid = $("#searchcar").val();
+        $("#searchcar").val("");
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/admin?id="+carid,
+            method: "DELETE",
+            contentType: "application/json",
+            success: function (res) {
+                if (res.code == 200) {
+                    alert(res.message);
+                } else if (res.code == 400) {
+                    alert(res.message);
+                } else {
+                    alert(res.message);
+                }
+            },
+            error: function (ob, errorStus) {
+                alert(res.message);
+                console.log(ob);
+            }
+        });
+
     });
 
 
@@ -1369,6 +1580,7 @@
             $("#luxuryCars").css("display","block");
         });
     });
+
     $("#btnlogout").click(function (){
         logout();
     });
@@ -1384,60 +1596,66 @@
     $("#lgout").click(function () {
        logout();
     });
-    $("#ad").click(function () {
-       admin();
-        $("#managecars").click(function () {
-           admin();
+    $("#vlgout").click(function () {
+        logout();
+    });
+    $("#rlgout").click(function () {
+        logout();
+    });
 
+
+    function adminlogin() {
+        admin();
+        $("#managecars").click(function () {
+            $("#admin").css("display","block");
+            $("#report").css("display","none");
+            $("#view").css("display","none");
         });
+            $("#viewvehicleschedule").click(function () {
+                $("#view").css("display","block");
+                $("#admin").css("display","none");
+                $("#report").css("display","none");
+            });
+            $("#reports").click(function () {
+                $("#report").css("display","block");
+                $("#admin").css("display","none");
+                $("#view").css("display","none");
+            });
+
         $("#viewvehicleschedule").click(function () {
-            view();
+            $("#view").css("display","block");
+            $("#admin").css("display","none");
+            $("#report").css("display","none");
+        });
             $("#vmanagecars").click(function () {
-                admin();
-            });
-            $("#vcalculatepayments").click(function () {
-                calculate();
-            });
-            $("#vlg_out").click(function () {
-                logout();
+                $("#admin").css("display","block");
+                $("#report").css("display","none");
+                $("#view").css("display","none");
             });
             $("#vreports").click(function () {
-               report();
+                $("#report").css("display","block");
+                $("#admin").css("display","none");
+                $("#view").css("display","none");
             });
 
+        $("#report").click(function () {
+            $("#report").css("display","block");
+            $("#admin").css("display","none");
+            $("#view").css("display","none");
         });
-        $("#calculatepayments").click(function () {
-            calculate();
-            $("#bmanagecars").click(function () {
-                admin();
-            });
-            $("#breports").click(function () {
-                report();
-            });
-            $("#blg_out").click(function () {
-                logout();
-            });
-            $("#bviewvehicleschedule").click(function () {
-                view();
-            });
-        });
-        $("#reports").click(function () {
-            report();
             $("#rmanagecars").click(function () {
-                admin();
-            });
-            $("#rcalculatepayments").click(function () {
-                calculate();
-            });
-            $("#rlg_out").click(function () {
-                logout();
+                $("#admin").css("display","block");
+                $("#report").css("display","none");
+                $("#view").css("display","none");
             });
             $("#rviewvehicleschedule").click(function () {
-                view();
+                $("#view").css("display","block");
+                $("#admin").css("display","none");
+                $("#report").css("display","none");
             });
-        });
 
-    });
+
+    }
 
     function calculate() {
         $("#generalCars").css("display", "none");
@@ -1464,7 +1682,6 @@
         $("#Place_Order").css("display", "none");
         $("#view").css("display", "none");
         $("#report").css("display", "none");
-        $("#bill").css("display", "none");
         $("#admin").css("display", "block");
     }
     function logout() {
@@ -1539,6 +1756,49 @@
             $("#Place_Order").css("display","none");
         });
 
+    }
+
+    function clearuser() {
+        $("#nic").val("");
+        $("#email").val("");
+        $("#username").val("");
+        $("#password").val("");
+        $("#drivingno").val("");
+        $("#address").val("");
+        $("#contact").val("");
+    }
+    function clearcar() {
+            $("#txtregno").val("");
+            $("#txtcolor").val("");
+            $("#txtbrand").val("");
+            $("#txttype").val("");
+            $("#txtnoofpassengers").val("");
+            $("#txttransmission").val("");
+            $("#txtfuel").val("");
+            $("#txtdailyrate").val("");
+            $("#txtMonthlyrate").val("");
+            $("#txtfreemilagemonth").val("");
+            $("#txtfreemilageday").val("");
+            $("#txtextraprice").val("");
+    }
+    function loadtable(){
+        $("#userTable").empty();
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/booking",
+            method: "GET",
+            success: function (res) {
+
+                for (const users of res.data) {
+                    let row = `<tr><td>${users.user_Name}</td><td>${users.address}</td><td>${users.contact}</td><td>${users.drivingNo}</td>
+                                <td>${users.email}</td><td>${users.nic}</td></tr>`;
+                    $("#userTable").append(row);
+                }
+
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
     }
 
 
