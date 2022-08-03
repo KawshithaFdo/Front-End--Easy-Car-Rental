@@ -1081,6 +1081,10 @@
                 <label class="form-label" for="txtnoofpassengers">No. Of Passengers</label>
                 <input class="form-control w-50" id="txtnoofpassengers" placeholder="No. Of Passengers" type="text">
             </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtcartype">Car Type</label>
+                <input class="form-control w-50" id="txtcartype" placeholder="General/Premium/Luxury" type="text">
+            </div>
         </div>
         <div class="col ">
             <div class="mb-3">
@@ -1345,7 +1349,7 @@
                                                     if (res.code == 200) {
                                                         // alert(res.message);
                                                         $.ajax({
-                                                            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/user_car",
+                                                            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/user_car?reg_no="+ob.reg_No+"&date="+ob.pickup_Date,
                                                             method: "GET",
                                                             contentType: "application/json",
                                                             success: function (res) {
@@ -1796,7 +1800,8 @@
             free_Milage_forDay: $("#txtfreemilageday").val(),
             free_Milage_forMonth:$("#txtfreemilagemonth").val(),
             no_ofAvailable:$("#txtnoofavailable").val(),
-            extra_Price:$("#txtextraprice").val()
+            extra_Price:$("#txtextraprice").val(),
+            car_type:$("#txtcartype")
 
         }
         $.ajax({
