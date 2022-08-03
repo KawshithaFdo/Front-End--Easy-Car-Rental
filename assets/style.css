@@ -138,6 +138,6 @@ header > ul > li:hover {
     cursor: pointer;
     color: red;
 }
-.table-hover tbody tr:hover > th {
+.table-hover tbody tr:hover > tr {
     background-color: #D1D119;
 }

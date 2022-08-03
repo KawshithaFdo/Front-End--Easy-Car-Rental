@@ -789,11 +789,10 @@
             <li id="lgout">Log Out</li>
         </ul>
     </header>
-
     <div class="row">
         <div class="col pb-4 pt-5">
             <section class="container-fluid bg-gradient">
-                <div class="row bg-gradient "><h4>Update User</h4></div>
+                <div class="row bg-gradient "><h4 class="text-primary">Update User</h4></div>
                 <div class="row bg-gradient">
                     <form class="mt-4 mb-4 w-100" >
                         <input id="searchuser" class="form-control w-50 col-sm-5 " type="search" placeholder="Enter User NIC" aria-label="Search">
@@ -819,12 +818,12 @@
                 <label class="form-label" for="txtusercontact">User Contact</label>
                 <input class="form-control w-50" id="txtusercontact" placeholder="User Contact" type="text">
             </div>
-        </div>
-        <div class="col-3 pt-5">
             <div class="mb-3">
                 <label class="form-label" for="txtuserdrivingno">User Driving License No.</label>
                 <input class="form-control w-50" id="txtuserdrivingno" placeholder="User Driving No" type="text">
             </div>
+        </div>
+        <div class="col-3 pt-5">
             <div class="mb-3">
                 <label class="form-label" for="txtuseremail">User E-Mail</label>
                 <input class="form-control w-50" id="txtuseremail" placeholder="User E-Mail" type="email">
@@ -843,7 +842,6 @@
             </div>
         </div>
     </div>
-
     <div class="row pb-5">
         <table class="table">
             <thead class="table-active">
@@ -881,7 +879,7 @@
         </ul>
     </header>
     <div class="d-flex">
-        <div class="row bg-gradient "><h4>Place Booking</h4></div>
+        <div class="row bg-gradient "><h4 class="text-primary">Place Booking</h4></div>
         <div class="col pt-5">
             <div class="mb-3">
                 <label class="form-label" for="txtu_NIC">User NIC</label>
@@ -926,9 +924,9 @@
                 <label class="form-label" for="txtreturndate">Return Date</label>
                 <input class="form-control w-50" id="txtreturndate" placeholder="Return-Date" type="date">
             </div>
-            <div class="mb-3">
+            <div class="mb-5">
                 <button id="btnplacebooking" type="button" class="btn btn-primary" >Place Booking</button>
-                <button id="clear" type="button" class="btn btn-outline-primary">Clear</button>
+                <button id="clear" type="button" class="btn btn-outline-dark">Clear</button>
             </div>
         </div>
     </div>
@@ -942,111 +940,114 @@
         <ul>
             <li id="managecars">Manage Car</li>
             <li id="viewvehicleschedule">View</li>
-            <li id="reports">Reports</li>
             <li id="lg_out">Log Out</li>
         </ul>
     </header>
     <div class="row">
+        <div class="row text-white text-center bg-black "><h4>Manage Cars</h4></div>
         <div class="col pb-4 pt-5">
             <section class="container-fluid bg-gradient">
-                <div class="row bg-gradient "><h4>Update Car</h4></div>
-                <div class="row bg-gradient">
-                    <form class="mt-4 mb-4 w-100" >
-                        <input id="searchcar" class="form-control w-50 col-sm-5 " type="search" placeholder="Search/Delete" aria-label="Search">
-                    </form>
-                </div>
-                <div class="row bg-gradient">
-                    <div class="col-3 pb-5">
-                        <button id="search" type="button" class="btn bg-success  w-100 m-2">Search</button>
-                    </div>
-                    <div class="mb-1">
-                        <button id="clr" type="button" class="btn btn-primary ">Clear</button>
-                        <button id="Deletecar" type="button" class="btn btn-danger ">Delete</button>
-                        <button id="Updatecar" type="button" class="btn btn-secondary ">Update</button>
-                    </div>
-                </div>
-                <div class="row bg-gradient">
-                    <button type="button" class="btn btn-outline-primary me-sm-5 " data-bs-toggle="modal" data-bs-target="#newdriverid">Add New Driver</button>
-                    <button type="button" class="btn btn-outline-info me-sm-1 " data-bs-toggle="modal" data-bs-target="#driver">View Driver</button>
+                <section class="container-fluid bg-gradient">
+                    <div class="row bg-gradient">
+                        <button type="button" class="btn btn-outline-primary me-sm-5 " data-bs-toggle="modal" data-bs-target="#newdriverid">Add New Driver</button>
+                        <button type="button" class="btn btn-outline-info me-sm-1 " data-bs-toggle="modal" data-bs-target="#driver">View Driver</button>
 
-                    <!--                    driver-->
-                    <div class="modal fade" id="newdriverid" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                         aria-labelledby="drivel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
+                        <!--                    driver-->
+                        <div class="modal fade" id="newdriverid" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                             aria-labelledby="drivel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
 
-                                <div class="modal-header">
-                                    <h5 class="modal-title text-secondary" id="drivel">New Driver</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <form id="newdriverform">
-                                    <div class="modal-body">
-                                        <h4>Driver NIC</h4>
-                                        <form class="d-flex mt-4 mb-4">
-                                            <input id="Drivernic" class="form-control" type="text">
-                                        </form>
-                                        <h4>Driver Name</h4>
-                                        <form class="d-flex mt-4 mb-4">
-                                            <input id="Drivername" class="form-control" type="text">
-                                        </form>
-                                        <h4>Driver Address</h4>
-                                        <form class="d-flex mt-4 mb-4">
-                                            <input id="Driveraddress" class="form-control" type="text">
-                                        </form>
-                                        <h4>Driver Contact</h4>
-                                        <form class="d-flex mt-4 mb-4">
-                                            <input id="Drivercontact" class="form-control" type="number">
-                                        </form>
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-secondary" id="drivel">New Driver</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                </form>
-                                <div class="modal-footer">
-                                    <button id="saveDriver" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
-                                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Clear</button>
-                                    <button type="button" class="btn btn-danger" >Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Driver-->
-                    <div class="modal fade" id="driver" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                         aria-labelledby="driverl" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title text-danger" id="driverl">Driver Log In</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <!--Table-->
-                                    <section class="row p-3 mb-5">
-                                        <div class="col">
-                                            <table class="table">
-                                                <thead class="bg-info">
-                                                <tr>
-                                                    <th scope="col">NIC</th>
-                                                    <th scope="col">DURATION</th>
-                                                    <th scope="col">PICK UP DATE </th>
-                                                    <th scope="col">RETURN DATE</th>
-                                                    <th scope="col">RENT TYPE</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody id="drivertable">
-
-                                                </tbody>
-                                            </table>
+                                    <form id="newdriverform">
+                                        <div class="modal-body">
+                                            <h4>Driver NIC</h4>
+                                            <form class="d-flex mt-4 mb-4">
+                                                <input id="Drivernic" class="form-control" type="text">
+                                            </form>
+                                            <h4>Driver Name</h4>
+                                            <form class="d-flex mt-4 mb-4">
+                                                <input id="Drivername" class="form-control" type="text">
+                                            </form>
+                                            <h4>Driver Address</h4>
+                                            <form class="d-flex mt-4 mb-4">
+                                                <input id="Driveraddress" class="form-control" type="text">
+                                            </form>
+                                            <h4>Driver Contact</h4>
+                                            <form class="d-flex mt-4 mb-4">
+                                                <input id="Drivercontact" class="form-control" type="number">
+                                            </form>
                                         </div>
-
-                                    </section>
-
+                                    </form>
+                                    <div class="modal-footer">
+                                        <button id="saveDriver" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                                        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Clear</button>
+                                        <button type="button" class="btn btn-danger" >Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
+                        <!--Driver-->
+                        <div class="modal fade" id="driver" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                             aria-labelledby="driverl" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-danger" id="driverl">Driver Log In</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!--Table-->
+                                        <section class="row p-3 mb-5">
+                                            <div class="col">
+                                                <table class="table">
+                                                    <thead class="bg-info">
+                                                    <tr>
+                                                        <th scope="col">NIC</th>
+                                                        <th scope="col">DURATION</th>
+                                                        <th scope="col">PICK UP DATE </th>
+                                                        <th scope="col">RETURN DATE</th>
+                                                        <th scope="col">RENT TYPE</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody id="drivertable">
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </section>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row bg-gradient">
+                        <form class="mt-4 mb-4 w-100" >
+                            <input id="searchcar" class="form-control w-50 col-sm-5 " type="search" placeholder="Search/Delete" aria-label="Search">
+                        </form>
+                    </div>
+                    <div class="row bg-gradient">
+                        <div class="col-3 pb-5">
+                            <button id="search" type="button" class="btn bg-success  w-100 m-2">Search</button>
+                            <button id="Deletecar" type="button" class="btn btn-danger w-100 m-2">Delete</button>
+                            <button id="clr" type="button" class="btn btn-primary w-100 m-2">Clear</button>
+                        </div>
+                    </div>
+                </section>
             </section>
         </div>
+        <div class="row bg-black text-white text-center "><h4>Add/Update Car</h4></div>
         <div class="col">
             <div class="mb-3">
                 <label class="form-label" for="txtregno">Car Reg_No</label>
@@ -1059,10 +1060,6 @@
             <div class="mb-3">
                 <label class="form-label" for="txtbrand">Car Brand</label>
                 <input class="form-control w-50" id="txtbrand" placeholder="Car Brand" type="text">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txttype">Rent Type</label>
-                <input class="form-control w-50" id="txttype" placeholder="Daily/Monthly" type="text">
             </div>
             <div class="mb-3">
                 <label class="form-label" for="frontimg">Front Image</label>
@@ -1080,12 +1077,12 @@
                 <label class="form-label" for="interiorimg">interior Image</label>
                 <input class="form-control w-50" id="interiorimg" type="file">
             </div>
-        </div>
-        <div class="col-3 ">
             <div class="mb-3">
                 <label class="form-label" for="txtnoofpassengers">No. Of Passengers</label>
                 <input class="form-control w-50" id="txtnoofpassengers" placeholder="No. Of Passengers" type="text">
             </div>
+        </div>
+        <div class="col ">
             <div class="mb-3">
                 <label class="form-label" for="txttransmission">Car Transmission</label>
                 <input class="form-control w-50" id="txttransmission" placeholder="Car Transmission" type="text">
@@ -1115,7 +1112,12 @@
                 <input class="form-control w-50" id="txtextraprice" placeholder="Extra Price" type="text">
             </div>
             <div class="mb-3">
+                <label class="form-label" for="txtnoofavailable">No. Of Available</label>
+                <input class="form-control w-50" id="txtnoofavailable" placeholder="No. Of Passengers" type="text">
+            </div>
+            <div class="mb-3">
                 <button id="btnSaveCar" type="button" class="btn btn-primary" >Save</button>
+                <button id="Updatecar" type="button" class="btn btn-secondary ">Update</button>
                 <button id="clearcar" type="button" class="btn btn-outline-primary">Clear</button>
             </div>
         </div>
@@ -1128,202 +1130,143 @@
         <ul>
             <li id="vmanagecars">Manage Car</li>
             <li id="vviewvehicleschedule">View</li>
-            <li id="vreports">Reports</li>
             <li id="vlg_out">Log Out</li>
         </ul>
     </header>
     <div class="row">
         <div class="col pb-4 pt-5 d-flex">
             <section class="container-fluid bg-gradient">
-                <div class="row text-secondary text-center "><h4>View</h4></div>
-                <!--Verify Customer-->
-               <!-- <div class="row bg-gradient">
-                    <form class="mt-4 mb-4 w-60" >
-                        <label class="form-label" for="txtverifyCustomer">Verify Customer</label>
-                        <input id="txtverifyCustomer" class="form-control w-25 col-sm-5 " type="search" placeholder="Verify Customer" aria-label="Search">
-                    </form>
-                </div>
-                <div class="row bg-gradient">
-                    <div class="col-3 pb-5">
-                        <button id="btnverifyCustomer" type="button" class="btn bg-success  w-100 m-2">Verify Customer</button>
-                    </div>
-                </div>
-                &lt;!&ndash;Accept Rent Request&ndash;&gt;
-                <div class="row bg-gradient">
-                    <form class="mt-4 mb-4 w-60" >
-                        <label class="form-label" for="txtverifyCustomer">Verify Rent</label>
-                        <input id="txtVerifyrent" class="form-control w-25 col-sm-5 " type="search" placeholder="Verify Rent" aria-label="Search">
-                    </form>
-                </div>
-                <div class="row bg-gradient">
-                    <div class="col-3 pb-5">
-                        <button id="btnverifyrent" type="button" class="btn bg-success  w-100 m-2">Verify Rent</button>
-                    </div>
-                </div>
-            </section>-->
-            <section class="container-fluid ">
-                <!--Change Driver-->
-                <div class="row bg-gradient">
-                    <h4 class="text-primary">Change Driver in Booking</h4>
-                    <form class="mt-4 mb-4 w-60" >
-                        <label class="form-label" for="txtbookingregno">Reg_No </label>
-                        <input id="txtbookingregno" class="form-control w-50 col-sm-5 " type="search" placeholder="Reg_No" aria-label="Search">
-                    </form>
-                    <form class="mt-4 mb-4 w-60" >
-                        <label class="form-label" for="txtbookingdate">Pick-Up Date</label>
-                        <input id="txtbookingdate" class="form-control w-50 col-sm-5 " type="date" placeholder="Pick-Up Date" aria-label="Search">
-                    </form>
-                    <form class="mt-4 mb-4 w-60" >
-                        <label class="form-label" for="txtD_Nic">Driver Nic</label>
-                        <input id="txtD_Nic" class="form-control w-50 col-sm-5 " type="search" placeholder="Driver NIC" aria-label="Search">
-                    </form>
-                    <form class="mt-4 mb-4 w-60">
-                        <label class="form-label" for="txtduration">Duration</label>
-                        <input class="form-control w-50 col-sm-5" id="txtduration" placeholder="Duration" type="text">
-                    </form>
-                    <form class="mt-4 mb-4 w-60" >
-                        <label class="form-label" for="damagecost">Damage Cost</label>
-                        <input id="damagecost" class="form-control w-50 col-sm-5 " type="search" placeholder="Damage Cost" aria-label="Search">
-                    </form>
-                    <div class="row bg-gradient">
-                        <div class="col w-75">
-                            <button id="btnChangeDriver" type="button" class="btn bg-primary  w-50 ">Change Driver</button>
+                <div class="row">
+                    <div class="row text-white text-center bg-black "><h4>Booking View</h4></div>
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-active">
+                        <tr>
+                            <th scope="col">Reg_No</th>
+                            <th scope="col">Pickup_Date</th>
+                            <th scope="col">Return_Date</th>
+                            <th scope="col">Driver_Nic</th>
+                            <th scope="col">Booking_Status</th>
+                        </tr>
+                        </thead>
+                        <tbody id="cartable">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class=" d-flex">
+                        <div class="col">
+                            <button id="btnacceptrent" type="button" class="btn bg-primary w-50  ">Accept</button>
+                        </div>
+                        <div class="col">
+                            <input class="form-control w-50 col-sm-5" id="txtrejectnote" placeholder="Description" type="text">
+                            <button id="btnrejectrent" type="button" class="btn bg-danger  w-50 ">Reject</button>
                         </div>
                     </div>
+                    <div class="row">
+                        <h4 class="text-center text-black-50">Calculate Payments</h4>
+                        <form class="mt-4 mb-4 w-60">
+                               <label class="form-label" for="txtduration">Duration</label>
+                               <input class="form-control w-50 col-sm-5" id="txtduration" placeholder="Duration" type="text">
+                           </form>
+                           <form class="mt-4 mb-4 w-60" >
+                               <label class="form-label" for="damagecost">Damage Cost</label>
+                               <input id="damagecost" class="form-control w-50 col-sm-5 " type="search" placeholder="Damage Cost" aria-label="Search">
+                           </form>
+                        <div class="col w-75 d-flex">
+                            <button id="btnmakepayment" type="button" class="btn bg-primary  w-50 ">Calculate Bill</button>
+                            <label class="form-label w-75 text-center" id="lblprice">Price</label>
+                        </div>
+                    </div>
+
                 </div>
+                <div class="row">
+                    <div class="row text-white text-center bg-black "><h4>Customer View</h4></div>
+                    <table class="table">
+                        <thead class="table-active">
+                        <tr>
+                            <th scope="col">User Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Driving No</th>
+                            <th scope="col">E-Mail</th>
+                            <th scope="col">NIC</th>
+
+                        </tr>
+                        </thead>
+                        <tbody id="userTable1">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <section class="container-fluid ">
+                <!--Change Driver-->
+                    <div class="row text-white text-center bg-black "><h4>Change Driver in Booking</h4></div>
+                    <section class="container-fluid d-flex">
+                        <div class="row bg-gradient">
+                            <form class="mt-4 mb-4 w-60" >
+                                <label class="form-label" for="txtbookingregno">Reg_No </label>
+                                <input id="txtbookingregno" class="form-control w-50 col-sm-5 " type="search" placeholder="Reg_No" aria-label="Search">
+                            </form>
+                            <form class="mt-4 mb-4 w-60" >
+                                <label class="form-label" for="txtbookingdate">Pick-Up Date</label>
+                                <input id="txtbookingdate" class="form-control w-50 col-sm-5 " type="date" placeholder="Pick-Up Date" aria-label="Search">
+                            </form>
+
+                        </div>
+                        <div class="row bg-gradient">
+                            <form class="mt-4 mb-4 w-60" >
+                                <label class="form-label" for="txtD_Nic">Driver Nic</label>
+                                <input id="txtD_Nic" class="form-control w-50 col-sm-5 " type="search" placeholder="Driver NIC" aria-label="Search">
+                            </form>
+                            <div class="row bg-gradient">
+                                <div class="col w-75">
+                                    <button id="btnChangeDriver" type="button" class="btn bg-primary  w-50 ">Change Driver</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
             </section>
-               <!-- &lt;!&ndash;Mark Vehicles&ndash;&gt;
-                <div class="row bg-gradient">
-                    <form class="mt-4 mb-4 w-60" >
-                        <label class="form-label" for="txtverifyCustomer">Mark Vehicle</label>
-                        <input id="txtmarkVehicle" class="form-control w-25 col-sm-5 " type="search" placeholder="Mark Vehicle" aria-label="Search">
-                    </form>
-                </div>-->
-                <!--<div class="row bg-gradient">
-                    <div class="col-3 pb-5">
-                        <button id="btnMarkVehicle" type="button" class="btn bg-success  w-100 ">Mark Vehicle</button>
-                    </div>
-                </div>-->
-            </section>
-        </div>
-       <!-- <div class="col">
-            <div class="mb-3">
-                <label class="form-label" for="txtregno">Car Reg_No</label>
-                <input class="form-control w-50" id="txtregno" placeholder="Car Reg_No" type="text">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtcolor">Car Color</label>
-                <input class="form-control w-50" id="txtcolor" placeholder="Car Color" type="text">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtbrand">Car Brand</label>
-                <input class="form-control w-50" id="txtbrand" placeholder="Car Brand" type="text">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txttype">Car Type</label>
-                <input class="form-control w-50" id="txttype" placeholder="Car Type" type="text">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="frontimg">Front Image</label>
-                <input class="form-control w-50" id="frontimg" type="file">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="rearimg">Rear Image</label>
-                <input class="form-control w-50" id="rearimg" type="file">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="sideimg">Side Image</label>
-                <input class="form-control w-50" id="sideimg" type="file">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="interiorimg">interior Image</label>
-                <input class="form-control w-50" id="interiorimg" type="file">
-            </div>
-        </div>
-        <div class="col-3 ">
-            <div class="mb-3">
-                <label class="form-label" for="txtnoofpassengers">No. Of Passengers</label>
-                <input class="form-control w-50" id="txtnoofpassengers" placeholder="No. Of Passengers" type="text">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txttransmission">Car Transmission</label>
-                <input class="form-control w-50" id="txttransmission" placeholder="Car Transmission" type="text">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtfuel">Car Fuel</label>
-                <input class="form-control w-50" id="txtfuel" placeholder="Car Fuel" type="text">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtdailyrate">Daily Rate</label>
-                <input class="form-control w-50" id="txtdailyrate" placeholder="Daily Rate" type="password">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtMonthlyrate">Monthly Rate</label>
-                <input class="form-control w-50" id="txtMonthlyrate" placeholder="Monthly Rate" type="password">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtfreemilage">Free Milage</label>
-                <input class="form-control w-50" id="txtfreemilage" placeholder="Free Milage" type="text">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="txtextraprice">Extra Price</label>
-                <input class="form-control w-50" id="txtextraprice" placeholder="Extra Price" type="password">
-            </div>
-            <div class="mb-3">
-                <button id="btnSaveCar" type="button" class="btn btn-primary" >Save</button>
-                <button id="clearcar" type="button" class="btn btn-outline-primary">Clear</button>
-            </div>
-        </div>-->
-    </div>
-</section>
-<!--Reports-->
-<section id="report" class="container-fluid">
-    <header>
-        <h1 class="text-danger">Easy Car Rental</h1>
-        <ul>
-            <li id="rmanagecars">Manage Car</li>
-            <li id="rviewvehicleschedule">View</li>
-<!--            <li id="rcalculatepayments">Payments</li>-->
-            <li id="rreports">Reports</li>
-            <li id="rlg_out">Log Out</li>
-        </ul>
-    </header>
-    <div class="row">
-        <div class="col pb-4 pt-5 d-flex justify-content-center">
-            <section class="container-fluid bg-gradient">
-                <div class="row bg-gradient "><h4>Income Reports</h4></div>
-                <div class="row bg-gradient">
-                    <div class="col-3 pb-5">
-                        <button id="btnDailyIncome" type="button" class="btn bg-success  w-100 m-2">Daily Income</button>
-                    </div>
-                </div>
-                <div class="row bg-gradient">
-                    <div class="col-3 pb-5">
-                        <button id="btnweeklyincome" type="button" class="btn bg-success  w-100 m-2">Weekly Income</button>
-                    </div>
-                </div>
-            </section>
-            <section class="container-fluid">
-                <div class="row bg-gradient">
-                    <div class="col-3 pb-5">
-                        <button id="btnmonthlyincome" type="button" class="btn bg-success  w-100 m-2">Monthly Income</button>
-                    </div>
-                </div>
-                <div class="row bg-gradient">
-                    <div class="col-3 pb-5">
-                        <button id="btnyearlyincome" type="button" class="btn bg-success  w-100 m-2">Yearly Income</button>
+                <div class="row">
+                    <div class="row text-white text-center bg-black "><h4>Reports View</h4></div>
+                    <div class="container-fluid d-flex justify-content-center align-items-center">
+                        <button id="btnDailyIncome" type="button" class="btn bg-success text-white w-50 m-2">Daily Income</button>
+                        <button id="btnweeklyincome" type="button" class="btn bg-success text-white w-50 m-2">Weekly Income</button>
+                        <button id="btnmonthlyincome" type="button" class="btn bg-success text-white w-50 m-2">Monthly Income</button>
+                        <button id="btnyearlyincome" type="button" class="btn bg-success text-white w-50 m-2">Yearly Income</button>
                     </div>
                 </div>
             </section>
         </div>
     </div>
 </section>
+
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script>
     logout();
-    let drivernic;
+    var nic;
+    var regNo;
+    var p_Date;
+    var r_Date;
+    var d_Nic;
+    function value(x){
+        nic=x;
+    }
     $("#btnplacebooking").click(function () {
+        console.log(nic);
         var ob={
             nic:$("#txtu_NIC").val(),
             reg_No:$("#txtcarregno").val(),
@@ -1332,8 +1275,9 @@
             return_Date:$("#txtreturndate").val(),
             driver_Status:$("#txtdriverStatus").val(),
             duration:null,
-            driver_nic:drivernic,
-            rent_type:$("#txtrenttype").val()
+            driver_nic:nic,
+            rent_type:$("#txtrenttype").val(),
+            status:"pending"
         };
         $.ajax({
             url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/booking",
@@ -1360,6 +1304,215 @@
                 console.log(ob);
             }
         });
+    });
+
+    $("#btnmakepayment").click(function () {
+                    $.ajax({
+                        url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/admin?reg_no="+regNo+"&date="+p_Date,
+                        method: "GET",
+                        contentType: "application/json",
+                        success: function (res) {
+                            if (res.code == 200) {
+                                let data=res.data;
+                                var ob={
+                                    nic:data.nic,
+                                    reg_No:data.reg_No,
+                                    pickup_Date:data.pickup_Date,
+                                    return_Date:data.return_Date,
+                                    driver_Status:data.driver_Status,
+                                    rent_type:data.rent_type,
+                                    driver_nic:d_Nic,
+                                    damagecost:$("#damagecost").val(),
+                                    duration:$("#txtduration").val(),
+                                    status: "Accept"
+                                };
+                                $.ajax({
+                                    url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/admin?reg_no="+nic,
+                                    method: "POST",
+                                    contentType: "application/json",
+                                    data:JSON.stringify(ob),
+                                    success: function (res) {
+                                        if (res.code == 200) {
+                                            // alert(res.message);
+                                            $("#damagecost").val("");
+                                            $("#txtduration").val("");
+                                            $.ajax({
+                                                url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/user_car",
+                                                method: "POST",
+                                                contentType: "application/json",
+                                                data:JSON.stringify(ob),
+                                                success: function (res) {
+                                                    if (res.code == 200) {
+                                                        // alert(res.message);
+                                                        $.ajax({
+                                                            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/user_car",
+                                                            method: "GET",
+                                                            contentType: "application/json",
+                                                            success: function (res) {
+                                                                if (res.code == 200) {
+                                                                    // alert(res.message);
+                                                                    $("#lblprice").val(res.data.price);
+                                                                    console.log(res.data.price);
+                                                                } else if (res.code == 400) {
+                                                                    alert(res.message);
+                                                                } else {
+                                                                    alert(res.message);
+                                                                }
+                                                            },
+                                                            error: function (ob, errorStus) {
+                                                                console.log(ob);
+                                                            }
+                                                        });
+                                                    } else if (res.code == 400) {
+                                                        alert(res.message);
+                                                    } else {
+                                                        alert(res.message);
+                                                    }
+                                                },
+                                                error: function (ob, errorStus) {
+                                                    console.log(ob);
+                                                }
+                                            });
+
+                                        } else if (res.code == 400) {
+                                            alert(res.message);
+                                        } else {
+                                            alert(res.message);
+                                        }
+                                    },
+                                    error: function (ob, errorStus) {
+                                        console.log(ob);
+                                    }
+                                });
+
+                            } else if (res.code == 400) {
+                                alert(res.message);
+                            } else {
+                                alert(res.message);
+                            }
+                        },
+                        error: function (ob, errorStus) {
+                            console.log(ob);
+                        }
+                    });
+
+    });
+
+    function data(regno,pdate,rdate,d_nic){
+        regNo=regno;
+        p_Date=pdate;
+        r_Date=rdate;
+        d_Nic=d_nic;
+    }
+    $("#btnacceptrent").click(function () {
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/admin?reg_no="+regNo+"&date="+p_Date,
+            method: "GET",
+            contentType: "application/json",
+            success: function (res) {
+                if (res.code == 200) {
+                    let data=res.data;
+                    var ob={
+                        nic:data.nic,
+                        reg_No:data.reg_No,
+                        pickup_Date:p_Date,
+                        return_Date:r_Date,
+                        driver_Status:data.driver_Status,
+                        rent_type:data.rent_type,
+                        driver_nic:data.driver_nic,
+                        damagecost:data.damagecost,
+                        duration:data.duration,
+                        status: "Accept"
+
+
+                    };
+                    $.ajax({
+                        url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/admin?reg_no="+regNo,
+                        method: "POST",
+                        contentType: "application/json",
+                        data:JSON.stringify(ob),
+                        success: function (res) {
+                            if (res.code == 200) {
+                                alert(res.message);
+                                loadcartable();
+                            } else if (res.code == 400) {
+                                alert(res.message);
+                            } else {
+                                alert(res.message);
+                            }
+                        },
+                        error: function (ob, errorStus) {
+                            console.log(ob);
+                        }
+                    });
+
+                } else if (res.code == 400) {
+                    alert(res.message);
+                } else {
+                    alert(res.message);
+                }
+            },
+            error: function (ob, errorStus) {
+                console.log(ob);
+            }
+        });
+
+    });
+
+    $("#btnrejectrent").click(function () {
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/admin?reg_no="+regNo+"&date="+r_Date,
+            method: "GET",
+            contentType: "application/json",
+            success: function (res) {
+                if (res.code == 200) {
+                    let data=res.data;
+                    var ob={
+                        nic:data.nic,
+                        reg_No:data.reg_No,
+                        pickup_Date:data.pickup_Date,
+                        return_Date:data.return_Date,
+                        driver_Status:data.driver_Status,
+                        rent_type:data.rent_type,
+                        driver_nic:data.driver_nic,
+                        damagecost:data.damagecost,
+                        duration:data.duration,
+                        status:$("#txtrejectnote").val()
+
+
+                    };
+                    $.ajax({
+                        url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/admin?reg_no="+regNo,
+                        method: "POST",
+                        contentType: "application/json",
+                        data:JSON.stringify(ob),
+                        success: function (res) {
+                            if (res.code == 200) {
+                                alert(res.message);
+                                $("#txtrejectnote").val("");
+                                loadcartable();
+                            } else if (res.code == 400) {
+                                alert(res.message);
+                            } else {
+                                alert(res.message);
+                            }
+                        },
+                        error: function (ob, errorStus) {
+                            console.log(ob);
+                        }
+                    });
+
+                } else if (res.code == 400) {
+                    alert(res.message);
+                } else {
+                    alert(res.message);
+                }
+            },
+            error: function (ob, errorStus) {
+                console.log(ob);
+            }
+        });
+
     });
 
     $("#btnChangeDriver").click(function () {
@@ -1392,8 +1545,9 @@
                                     driver_Status:data.driver_Status,
                                     rent_type:data.rent_type,
                                     driver_nic:$("#txtD_Nic").val(),
-                                    damagecost:$("#damagecost").val(),
-                                    duration:$("#txtduration").val()
+                                    damagecost:null,
+                                    duration:null,
+                                    status: "pending"
 
 
                                 };
@@ -1406,8 +1560,6 @@
                                         if (res.code == 200) {
                                             alert(res.message);
                                             $("#txtD_Nic").val("");
-                                            $("#txtduration").val("");
-                                            $("#damagecost").val("");
                                         } else if (res.code == 400) {
                                             alert(res.message);
                                         } else {
@@ -1452,17 +1604,13 @@
             url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/booking?user_Name="+userName+"&password="+password,
             method: "GET",
             contentType: "application/json",
-            //data:null,
             success: function (res) {
                 if (res.code == 200) {
-                   //alert(res.message);
                     loginuser();
                     loadtable();
                     loaddrivertable();
-                } else if (res.code == 400) {
+                } else  {
                     alert(res.message);
-                    } else {
-                        alert(res.message);
                 }
             },
             error: function (ob, errorStus) {
@@ -1544,7 +1692,6 @@
             contentType: "application/json",
             success: function (res) {
                 if (res.code == 200) {
-                   // alert(res.message);
                     adminlogin();
                 } else if (res.code == 400) {
                     alert(res.message);
@@ -1641,7 +1788,6 @@
             reg_No: $("#txtregno").val(),
             color: $("#txtcolor").val(),
             brand: $("#txtbrand").val(),
-            type: $("#txttype").val(),
             no_ofPassengers:$("#txtnoofpassengers").val(),
             transmission: $("#txttransmission").val(),
             fuel: $("#txtfuel").val(),
@@ -1649,6 +1795,7 @@
             monthlyrate:$("#txtMonthlyrate").val(),
             free_Milage_forDay: $("#txtfreemilageday").val(),
             free_Milage_forMonth:$("#txtfreemilagemonth").val(),
+            no_ofAvailable:$("#txtnoofavailable").val(),
             extra_Price:$("#txtextraprice").val()
 
         }
@@ -1695,6 +1842,7 @@
                     $("#txtMonthlyrate").val(car.monthlyrate);
                     $("#txtfreemilagemonth").val(car.free_Milage_forMonth);
                     $("#txtfreemilageday").val(car.free_Milage_forDay);
+                    $("#txtnoofavailable").val(car.no_ofAvailable);
                     $("#txtextraprice").val(car.extra_Price);
 
                 } else if (res.code == 400) {
@@ -1716,7 +1864,6 @@
             reg_No: $("#txtregno").val(),
             color: $("#txtcolor").val(),
             brand: $("#txtbrand").val(),
-            type: $("#txttype").val(),
             no_ofPassengers:$("#txtnoofpassengers").val(),
             transmission: $("#txttransmission").val(),
             fuel: $("#txtfuel").val(),
@@ -1724,6 +1871,7 @@
             monthlyrate:$("#txtMonthlyrate").val(),
             free_Milage_forDay: $("#txtfreemilageday").val(),
             free_Milage_forMonth:$("#txtfreemilagemonth").val(),
+            no_ofAvailable:$("#txtnoofavailable").val(),
             extra_Price:$("#txtextraprice").val()
 
         }
@@ -1810,67 +1958,80 @@
     $("#lgout").click(function () {
        logout();
     });
-    $("#vlgout").click(function () {
+    $("#vlg_out").click(function () {
         logout();
     });
-    $("#rlgout").click(function () {
-        logout();
-    });
-
 
     function adminlogin() {
         admin();
-        $("#managecars").click(function () {
-            $("#admin").css("display","block");
-            $("#report").css("display","none");
-            $("#view").css("display","none");
-        });
+        loadtable2();
+        loadcartable();
+        loaddriverdata();
+            $("#managecars").click(function () {
+                $("#admin").css("display","block");
+                $("#view").css("display","none");
+            });
             $("#viewvehicleschedule").click(function () {
                 $("#view").css("display","block");
                 $("#admin").css("display","none");
-                $("#report").css("display","none");
-            });
-            $("#reports").click(function () {
-                $("#report").css("display","block");
-                $("#admin").css("display","none");
-                $("#view").css("display","none");
             });
 
-        $("#viewvehicleschedule").click(function () {
-            $("#view").css("display","block");
-            $("#admin").css("display","none");
-            $("#report").css("display","none");
-        });
             $("#vmanagecars").click(function () {
                 $("#admin").css("display","block");
-                $("#report").css("display","none");
                 $("#view").css("display","none");
             });
-            $("#vreports").click(function () {
-                $("#report").css("display","block");
-                $("#admin").css("display","none");
-                $("#view").css("display","none");
-            });
-
-        $("#report").click(function () {
-            $("#report").css("display","block");
-            $("#admin").css("display","none");
-            $("#view").css("display","none");
-        });
-            $("#rmanagecars").click(function () {
-                $("#admin").css("display","block");
-                $("#report").css("display","none");
-                $("#view").css("display","none");
-            });
-            $("#rviewvehicleschedule").click(function () {
+            $("#vviewvehicleschedule").click(function () {
                 $("#view").css("display","block");
                 $("#admin").css("display","none");
-                $("#report").css("display","none");
             });
-
-
     }
+    function loadcartable() {
+        $("#cartable").empty();
+        let regno;
+        let p_date;
+        let r_date;
+        let d_nic;
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/user_car",
+            method: "GET",
+            success: function (res) {
 
+                for (const users of res.data) {
+                    let row = `<tr><td>${users.reg_No}</td><td>${users.pickup_Date}</td><td>${users.return_Date}</td><td>${users.driver_nic}</td><td>${users.status}</td></tr>`;
+                    $("#cartable").append(row);
+                }
+                $("#cartable>tr").click(function () {
+                    regno = $(this).children().eq(0).text();
+                    p_date=$(this).children().eq(1).text();
+                    r_date=$(this).children().eq(2).text();
+                    d_nic=$(this).children().eq(3).text();
+                    data(regno,p_date,r_date,d_nic);
+                });
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
+    function loadtable2(){
+        $("#userTable1").empty();
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/booking",
+            method: "GET",
+            success: function (res) {
+
+                for (const users of res.data) {
+                    let row = `<tr><td>${users.user_Name}</td><td>${users.address}</td><td>${users.contact}</td><td>${users.drivingNo}</td>
+                                <td>${users.email}</td><td>${users.nic}</td></tr>`;
+                    $("#userTable1").append(row);
+                }
+
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+    }
     function calculate() {
         $("#generalCars").css("display", "none");
         $("#nav").css("display", "none");
@@ -1895,7 +2056,6 @@
         $("#Update_User").css("display", "none");
         $("#Place_Order").css("display", "none");
         $("#view").css("display", "none");
-        $("#report").css("display", "none");
         $("#admin").css("display", "block");
     }
     function logout() {
@@ -1909,7 +2069,6 @@
         $("#Place_Order").css("display", "none");
         $("#admin").css("display", "none");
         $("#view").css("display", "none");
-        $("#report").css("display", "none");
         $("#bill").css("display", "none");
     }
     function login() {
@@ -1923,6 +2082,8 @@
         $("#luxuryCars").css("display","none");
     }
     function view() {
+        loadcartable();
+        loadtable2();
         $("#generalCars").css("display", "none");
         $("#nav").css("display", "none");
         $("#dashboard").css("display", "none");
@@ -1932,7 +2093,6 @@
         $("#Update_User").css("display", "none");
         $("#Place_Order").css("display", "none");
         $("#admin").css("display", "none");
-        $("#report").css("display", "none");
         $("#bill").css("display", "none");
         $("#view").css("display", "block");
     }
@@ -1971,7 +2131,6 @@
         });
 
     }
-
     function clearuser() {
         $("#nic").val("");
         $("#email").val("");
@@ -1994,6 +2153,7 @@
             $("#txtfreemilagemonth").val("");
             $("#txtfreemilageday").val("");
             $("#txtextraprice").val("");
+            $("#txtnoofavailable").val("");
     }
     function loadtable(){
         $("#userTable").empty();
@@ -2016,6 +2176,7 @@
     }
     function loaddrivertable() {
         $("#tbldriverdata").empty();
+        let drivernic;
         $.ajax({
             url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/driver",
             method: "GET",
@@ -2027,9 +2188,28 @@
                 }
                 $("#tbldriverdata>tr").click(function () {
                     drivernic = $(this).children().eq(1).text();
-                    console.log(drivernic);
+                    value(drivernic);
+
                 });
 
+            },
+            error: function (ob) {
+                alert(ob.responseJSON.message);
+            }
+        });
+
+    }
+    function loaddriverdata(){
+        $("#drivertable").empty();
+        $.ajax({
+            url: "http://localhost:8080/Easy_Car_Rental_System_war/v1/user_car",
+            method: "GET",
+            success: function (res) {
+
+                for (const drivers of res.data) {
+                    let row = `<tr><td>${drivers.driver_nic}</td><td>${drivers.duration}</td><td>${drivers.pickup_Date}</td><td>${drivers.return_Date}</td><td>${drivers.rent_type}</td></tr>`;
+                    $("#drivertable").append(row);
+                }
             },
             error: function (ob) {
                 alert(ob.responseJSON.message);
