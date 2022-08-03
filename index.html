@@ -1116,10 +1116,6 @@
                 <input class="form-control w-50" id="txtextraprice" placeholder="Extra Price" type="text">
             </div>
             <div class="mb-3">
-                <label class="form-label" for="txtnoofavailable">No. Of Available</label>
-                <input class="form-control w-50" id="txtnoofavailable" placeholder="No. Of Passengers" type="text">
-            </div>
-            <div class="mb-3">
                 <button id="btnSaveCar" type="button" class="btn btn-primary" >Save</button>
                 <button id="Updatecar" type="button" class="btn btn-secondary ">Update</button>
                 <button id="clearcar" type="button" class="btn btn-outline-primary">Clear</button>
@@ -1172,7 +1168,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <h4 class="text-center text-black-50">Calculate Payments</h4>
+                        <h4 class="text-black-50">Calculate Payments</h4>
                         <form class="mt-4 mb-4 w-60">
                                <label class="form-label" for="txtduration">Duration</label>
                                <input class="form-control w-50 col-sm-5" id="txtduration" placeholder="Duration" type="text">
@@ -1183,7 +1179,8 @@
                            </form>
                         <div class="col w-75 d-flex">
                             <button id="btnmakepayment" type="button" class="btn bg-primary  w-50 ">Calculate Bill</button>
-                            <label class="form-label w-75 text-center" id="lblprice">Price</label>
+                            <label class="form-label  w-25" style="font-size: 20px">Bill Price :</label>
+                            <label class="form-label w-75 " id="lblprice" style="font-size: 20px">Price</label>
                         </div>
                     </div>
 
@@ -1355,8 +1352,7 @@
                                                             success: function (res) {
                                                                 if (res.code == 200) {
                                                                     // alert(res.message);
-                                                                    $("#lblprice").val(res.data.price);
-                                                                    console.log(res.data.price);
+                                                                    $("#lblprice").text(res.data.price);
                                                                 } else if (res.code == 400) {
                                                                     alert(res.message);
                                                                 } else {
@@ -1799,9 +1795,8 @@
             monthlyrate:$("#txtMonthlyrate").val(),
             free_Milage_forDay: $("#txtfreemilageday").val(),
             free_Milage_forMonth:$("#txtfreemilagemonth").val(),
-            no_ofAvailable:$("#txtnoofavailable").val(),
             extra_Price:$("#txtextraprice").val(),
-            car_type:$("#txtcartype")
+            car_type:$("#txtcartype").val()
 
         }
         $.ajax({
@@ -2159,6 +2154,7 @@
             $("#txtfreemilageday").val("");
             $("#txtextraprice").val("");
             $("#txtnoofavailable").val("");
+            $("#txtcartype").val("");
     }
     function loadtable(){
         $("#userTable").empty();
